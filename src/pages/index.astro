@@ -1,11 +1,15 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import Svelte from "../components/Svelte.svelte";
 
 const greeting = "Hi, welcome to visualization";
 ---
 
 <Layout title="Welcome to Astro.">
-  <main><h1>{greeting}</h1></main>
+  <main>
+    <h1>{greeting}</h1>
+    <Svelte client:load />
+  </main>
 </Layout>
 
 <!-- <style>
