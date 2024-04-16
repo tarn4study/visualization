@@ -1,6 +1,8 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Svelte from "../components/Svelte.svelte";
+import Dot from "../components/Dot.svelte";
+import Map from "../components/Map.svelte";
 
 const greeting = "Hi, welcome to visualization";
 ---
@@ -9,6 +11,9 @@ const greeting = "Hi, welcome to visualization";
   <main>
     <h1>{greeting}</h1>
     <Svelte client:load />
+
+    <Dot client:load />
+    <Map client:only />
   </main>
 </Layout>
 
