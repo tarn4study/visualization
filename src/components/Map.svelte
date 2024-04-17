@@ -26,16 +26,18 @@
 </script>
 
 <p>{name}</p>
-<svg {width} {height}>
-  {#each provinces as { path, properties }}
-    <path
-      d={path}
-      class:active={name === properties.name}
-      on:mouseenter={() => (name = properties.name)}
-      role="presentation"
-    />
-  {/each}
-</svg>
+<div class="map">
+  <svg {width} {height}>
+    {#each provinces as { path, properties }}
+      <path
+        d={path}
+        class:active={name === properties.name}
+        on:mouseenter={() => (name = properties.name)}
+        role="presentation"
+      />
+    {/each}
+  </svg>
+</div>
 
 <style>
   path {
@@ -46,5 +48,9 @@
   }
   path.active {
     opacity: 1;
+  }
+  div.map {
+    position: absolute;
+    right: 0vh;
   }
 </style>
