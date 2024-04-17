@@ -1,0 +1,29 @@
+---
+const { title } = Astro.props;
+---
+
+<div id="start">
+  <h2>อยู่ที่ไหนอ่ะ บอกหน่อย เดี๋ยวบอกเองว่ากู้ได้เท่าไหร่</h2>
+</div>
+<div class="button-container">
+  <button class="item-1">กรุงเทพ</button><button class="item-2"
+    >อุทัยธานี</button
+  ><button class="item-3">ประเทศไทย</button>
+</div>
+<style>
+  div.button-container {
+    display: grid;
+    grid-template-columns: 100px 100px 100px;
+    gap: 2rem;
+    padding: 0;
+  }
+  .item-1 {
+    grid-column-start: 1;
+  }
+  .item-2 {
+    grid-column-start: 2;
+  }
+  .item-3 {
+    grid-column-start: 3;
+  }
+</style>
