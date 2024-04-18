@@ -6,8 +6,18 @@
   const geojsonPath =
     "https://raw.githubusercontent.com/apisit/thailand.json/master/thailandWithName.json";
 
+  const ldrPath =
+    "https://raw.githubusercontent.com/tarn4study/visualization/master/src/data/LDR.csv";
+
   let geojson;
   d3.json(geojsonPath).then((data) => (geojson = data));
+
+  let ldrdata;
+  d3.csv(ldrPath).then((data) => {
+    ldrdata = data;
+  });
+
+  $: console.log(ldrdata);
 
   $: projection = d3.geoMercator().fitSize([width, height], geojson);
 
@@ -23,9 +33,11 @@
     });
   $: console.log(provinces);
   let name = null;
+  let ldrvalue = null;
 </script>
 
 <p>{name}</p>
+<p>{ldrvalue}</p>
 <div class="map">
   <svg {width} {height}>
     {#each provinces as { path, properties }}
