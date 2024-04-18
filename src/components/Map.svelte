@@ -29,9 +29,15 @@
   $: pathGenerator = d3.geoPath(projection);
 
   let colorScale = d3
-    .scaleThreshold()
+    .scaleLinear()
     .domain([0, 100, 200])
-    .range(d3.schemeBlues[3]);
+    .range([
+      d3.interpolateRdBu(0),
+      d3.interpolateRdBu(0.5),
+      d3.interpolateRdBu(1),
+    ]);
+
+  $: console.log(`color: ${d3.interpolateRdBu(0)}`);
 
   let provinces = [];
   $: if (geojson)
@@ -57,23 +63,45 @@
     {#each provinces as { path, properties }}
       <path
         d={path}
+        fill={colorScale(ldrDict[properties.name])}
         class:active={name === properties.name}
         on:mouseenter={() => (name = properties.name)}
         role="presentation"
       />
     {/each}
+    <g class="legend" transform={`translate(${width - 400}, ${height - 600})`}>
+      <g transform="translate(10,0)">
+        <rect width="200" height="18" style="fill: url(#linearGradient)" />
+      </g>
+      <linearGradient id="linearGradient">
+        <stop offset="0%" stop-color={d3.interpolateRdBu(0)} />
+        <stop offset="50%" stop-color={d3.interpolateRdBu(0.5)} />
+        <stop offset="100%" stop-color={d3.interpolateRdBu(1)} />
+      </linearGradient>
+      <g class="legendLabels" font-family="sans-serif" font-size="10">
+        <svg>
+          <g transform="translate(10,0)">
+            {#each d3.scaleLinear().domain([0, 200]).ticks(2) as tick}
+              <text x={tick} y="30" dx=".3em" text-anchor="end">
+                {tick}
+              </text>
+            {/each}
+          </g>
+        </svg>
+      </g>
+    </g>
   </svg>
 </div>
 
 <style>
   path {
-    fill: green;
     stroke: none;
-    opacity: 0.5;
+    opacity: 1;
     transition: opacity 0.4s ease-in-out;
   }
   path.active {
-    opacity: 1;
+    stroke: black;
+    stroke-width: 2px;
   }
   div.map {
     position: absolute;
