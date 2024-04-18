@@ -13,12 +13,12 @@
   d3.json(geojsonPath).then((data) => (geojson = data));
 
   let ldrdata;
+  const ldrDict = {};
   d3.csv(ldrPath).then((data) => {
     ldrdata = data;
+
     ldrdata.forEach((dataPoint) => {
-      const prov = dataPoint.province;
-      const ldrval = dataPoint.LDR;
-      console.log(`prov: ${prov}, ldr: ${ldrval}`);
+      ldrDict[dataPoint.province] = dataPoint.LDR;
     });
   });
 
@@ -39,6 +39,10 @@
   $: console.log(provinces);
   let name = null;
   let ldrvalue = null;
+
+  $: if (name) {
+    ldrvalue = ldrDict[name];
+  }
 </script>
 
 <p>{name}</p>
