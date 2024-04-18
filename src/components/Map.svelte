@@ -4,7 +4,7 @@
   let height = 600;
 
   const geojsonPath =
-    "https://raw.githubusercontent.com/apisit/thailand.json/master/thailandWithName.json";
+    "https://raw.githubusercontent.com/tarn4study/visualization/master/src/data/thailandWithName.json";
 
   const ldrPath =
     "https://raw.githubusercontent.com/tarn4study/visualization/master/src/data/LDR.csv";
@@ -27,6 +27,11 @@
   $: projection = d3.geoMercator().fitSize([width, height], geojson);
 
   $: pathGenerator = d3.geoPath(projection);
+
+  let colorScale = d3
+    .scaleThreshold()
+    .domain([0, 100, 200])
+    .range(d3.schemeBlues[3]);
 
   let provinces = [];
   $: if (geojson)
