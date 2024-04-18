@@ -15,6 +15,11 @@
   let ldrdata;
   d3.csv(ldrPath).then((data) => {
     ldrdata = data;
+    ldrdata.forEach((dataPoint) => {
+      const prov = dataPoint.province;
+      const ldrval = dataPoint.LDR;
+      console.log(`prov: ${prov}, ldr: ${ldrval}`);
+    });
   });
 
   $: console.log(ldrdata);
