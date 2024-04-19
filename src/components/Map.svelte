@@ -64,7 +64,7 @@
       />
     {/each}
   </svg>
-  <svg class="legend-container">
+  <svg id="legend-container">
     <g class="legend" transform={`translate(0, 0)`}>
       <g transform="translate(10,0)">
         <rect width="200" height="18" style="fill: url(#linearGradient)" />
@@ -100,5 +100,11 @@
   }
   #ldr {
     transform: scale(1.5);
+    z-index: 0;
+    position: relative;
+  }
+  #legend-container {
+    z-index: 1;
+    position: relative;
   }
 </style>
