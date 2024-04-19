@@ -49,17 +49,11 @@
     });
   $: console.log(provinces);
   let name = null;
-  let ldrvalue = null;
-
-  $: if (name) {
-    ldrvalue = ldrDict[name];
-  }
+  // 125 150 400 300 scale 1.5
 </script>
 
-<p>{name}</p>
-<p>{ldrvalue}</p>
-<div class="map">
-  <svg {width} {height}>
+<div>
+  <svg id="ldr" {width} {height} viewBox="125 150 400 300">
     {#each provinces as { path, properties }}
       <path
         d={path}
@@ -69,7 +63,9 @@
         role="presentation"
       />
     {/each}
-    <g class="legend" transform={`translate(${width - 400}, ${height - 600})`}>
+  </svg>
+  <svg>
+    <g class="legend" transform={`translate(0, 0)`}>
       <g transform="translate(10,0)">
         <rect width="200" height="18" style="fill: url(#linearGradient)" />
       </g>
@@ -97,14 +93,12 @@
   path {
     stroke: none;
     opacity: 1;
-    transition: opacity 0.4s ease-in-out;
   }
   path.active {
     stroke: black;
     stroke-width: 2px;
   }
-  div.map {
-    position: absolute;
-    right: 0vh;
+  #ldr {
+    transform: scale(1.5);
   }
 </style>
