@@ -53,7 +53,7 @@
 </script>
 
 <div>
-  <svg id="ldr" {width} {height} viewBox="125 150 400 300">
+  <svg id="ldr" {width} {height} viewBox="225 200 200 200">
     {#each provinces as { path, properties }}
       <path
         d={path}
@@ -64,7 +64,7 @@
       />
     {/each}
   </svg>
-  <svg>
+  <svg class="legend-container">
     <g class="legend" transform={`translate(0, 0)`}>
       <g transform="translate(10,0)">
         <rect width="200" height="18" style="fill: url(#linearGradient)" />
@@ -96,7 +96,7 @@
   }
   path.active {
     stroke: black;
-    stroke-width: 2px;
+    stroke-width: 0.5px;
   }
   #ldr {
     transform: scale(1.5);
