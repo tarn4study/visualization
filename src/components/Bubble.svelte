@@ -1,6 +1,5 @@
 <script>
   import * as d3 from "d3";
-  import data from "../data/data";
   let width = 800;
   let height = 600;
 
@@ -16,4 +15,4 @@
   });
 </script>
 
-<svg></svg>
+<svg {width} {height}></svg>
