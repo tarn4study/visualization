@@ -39,6 +39,14 @@
       .attr("width", width)
       .attr("height", height);
 
+    const backgroundCircle = {
+      cx: width / 2 + 15,
+      cy: height / 2,
+      radius: Math.max(...data.map((d) => d.radius)) * 2.75,
+      fill: "lightgray",
+      opacity: 0.2,
+    };
+
     const simulation = d3
       .forceSimulation(data)
       .force("x", d3.forceX().strength(0.08))
@@ -51,6 +59,14 @@
           .iterations(4)
       )
       .force("center", d3.forceCenter(centerX, centerY));
+
+    svg
+      .append("circle")
+      .attr("r", backgroundCircle.radius)
+      .attr("cx", backgroundCircle.cx)
+      .attr("cy", backgroundCircle.cy)
+      .attr("fill", backgroundCircle.fill)
+      .attr("opacity", backgroundCircle.opacity);
 
     const colorScale = d3.scaleOrdinal(d3.schemeCategory10);
     const tooltip = document.getElementById("tooltip");
