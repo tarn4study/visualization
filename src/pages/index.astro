@@ -7,7 +7,7 @@ import Bubble from "../components/Bubble.svelte";
 const greeting = "Hi, welcome to visualization";
 ---
 
-<Layout title="Welcome to Astro.">
+<Layout title={greeting}>
   <main>
     <section>
       <div><Greeting /></div>
@@ -16,7 +16,7 @@ const greeting = "Hi, welcome to visualization";
       <div id="ldr"><Map client:only="svelte" /></div>
     </section>
     <section>
-      <div><Bubble client:only="svelte" /></div>
+      <div><Bubble client:visible /></div>
     </section>
   </main>
 </Layout>
