@@ -52,27 +52,6 @@
       )
       .force("center", d3.forceCenter(centerX, centerY));
 
-    const drag = d3
-      .drag()
-      .on("start", dragstarted)
-      .on("drag", dragged)
-      .on("end", dragended);
-
-    function dragstarted(d) {
-      d3.select(this).raise().classed("dragging", true); // Raise & add dragging class
-    }
-
-    function dragged(event, d) {
-      d.x += event.dx;
-      d.y += event.dy;
-      d3.select(this).attr("cx", d.x).attr("cy", d.y);
-    }
-
-    function dragended(event, d) {
-      d3.select(this).classed("dragging", false);
-      simulation.restart(); // Restart simulation with centering force
-    }
-
     const colorScale = d3.scaleOrdinal(d3.schemeCategory10);
     const tooltip = document.getElementById("tooltip");
     const circles = svg
@@ -95,8 +74,7 @@
       })
       .on("mouseout", () => {
         tooltip.style.display = "none";
-      })
-      .call(drag);
+      });
 
     simulation.on("tick", () => {
       circles.attr("cx", (d) => d.x).attr("cy", (d) => d.y);
