@@ -106,5 +106,6 @@
   #legend-container {
     z-index: 1;
     position: relative;
+    background-color: white;
   }
 </style>
