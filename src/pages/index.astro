@@ -3,6 +3,7 @@ import Layout from "../layouts/Layout.astro";
 import Map from "../components/Map.svelte";
 import Greeting from "../components/Greeting.astro";
 import Bubble from "../components/Bubble.svelte";
+import EmployMap from "../components/EmployMap.svelte";
 
 const greeting = "Hi, welcome to visualization";
 ---
@@ -17,6 +18,9 @@ const greeting = "Hi, welcome to visualization";
     </section>
     <section>
       <div><Bubble client:visible /></div>
+    </section>
+    <section>
+      <div><EmployMap client:only="svelte" /></div>
     </section>
   </main>
 </Layout>
