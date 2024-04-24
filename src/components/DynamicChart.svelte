@@ -1,5 +1,4 @@
 <script>
-  import Bubble from "./Bubble.svelte";
   import LdrMap from "./LdrMap.svelte";
   import BubbleLoan from "./BubbleLoan.svelte";
   let show = false;
