@@ -8,6 +8,7 @@ import EmployMap from "../components/EmployMap.svelte";
 import LdrMap from "../components/LdrMap.svelte";
 import Greeting from "../components/Greeting.astro";
 import DynamicGraph from "../components/DynamicGraph.astro";
+import DynamicChart from "../components/DynamicChart.svelte";
 
 const greeting = "Hi, welcome to visualization";
 ---
@@ -31,7 +32,7 @@ const greeting = "Hi, welcome to visualization";
       <div><Bubble client:visible /></div>
     </section>
     <section>
-      <div><DynamicGraph /></div>
+      <div><DynamicChart client:only="svelte" /></div>
     </section>
   </main>
 </Layout>
