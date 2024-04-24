@@ -1,9 +1,11 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Map from "../components/Map.svelte";
-import Greeting from "../components/Greeting.astro";
+import Location from "../components/Location.astro";
 import Bubble from "../components/Bubble.svelte";
 import EmployMap from "../components/EmployMap.svelte";
+import LdrMap from "../components/LdrMap.svelte";
+import Greeting from "../components/Greeting.astro";
 
 const greeting = "Hi, welcome to visualization";
 ---
@@ -13,6 +15,8 @@ const greeting = "Hi, welcome to visualization";
     <section>
       <div><Greeting /></div>
     </section>
+
+    <div><Location /></div>
     <section>
       <div id="ldr"><Map client:only="svelte" /></div>
     </section>
@@ -22,8 +26,19 @@ const greeting = "Hi, welcome to visualization";
     <section>
       <div><EmployMap client:only="svelte" /></div>
     </section>
+    <section>
+      <div><LdrMap client:only="svelte" /></div>
+    </section>
   </main>
 </Layout>
+
+<style>
+  section:nth-child(1) {
+    background: linear-gradient(to bottom, blue 52%, white 48%);
+    width: 100vw;
+    color: white;
+  }
+</style>
 
 <!-- <style>
   main {
