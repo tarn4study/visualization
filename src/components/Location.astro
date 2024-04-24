@@ -1,0 +1,93 @@
+---
+
+---
+
+<script>
+  const button1 = document.getElementById("bangkok");
+  const button2 = document.getElementById("uthai");
+  const button3 = document.getElementById("thai");
+  const text = document.getElementById("text");
+
+  button1.addEventListener("click", function () {
+    document.body.style.overflow = "auto"; // Enable scrolling
+    button1.classList.add("selected");
+    button2.classList.remove("selected");
+    button3.classList.remove("selected");
+    text.textContent =
+      "สวัสดีครับคนกรุงเทพ เราให้คุณกู้ได้ 128% ของเงินฝากละกัน ในขณะที่คนอุทัยธานีมีให้กู้ประมาณ 32% ของเงินฝาก และคนไทยเฉลี่ยทั้งประเทศกู้ได้ประมาณ 107% ของเงินฝาก";
+  });
+
+  button2.addEventListener("click", function () {
+    document.body.style.overflow = "auto"; // Enable scrolling
+    button2.classList.add("selected");
+    button1.classList.remove("selected");
+    button3.classList.remove("selected");
+    text.textContent =
+      "สวัสดีคนอุทัยธานี เราให้คุณกู้ได้แค่ 32% ของเงินฝากนะ เสียดาย ถ้าคุณเป็นคนกรุงเทพ คุณจะกู้ได้ถึง 128% ของเงินฝาก แล้วคนไทยเฉลี่ยทั้งประเทศยังกู้ได้ประมาณ 107% ของเงินฝาก";
+  });
+
+  button3.addEventListener("click", function () {
+    document.body.style.overflow = "auto"; // Enable scrolling
+    button3.classList.add("selected");
+    button2.classList.remove("selected");
+    button1.classList.remove("selected");
+    text.textContent =
+      "สวัสดีคนไทย เราให้คุณกู้ได้ 107% ของเงินฝากนะ เสียดาย ถ้าคุณเป็นคนกรุงเทพ คุณจะกู้ได้ถึง 128% ของเงินฝาก แต่ถ้าคุณเป็นคนอุทัยธานี คุณจะกู้ได้ประมาณ 32% ของเงินฝาก";
+  });
+</script>
+
+<section>
+  <div><h2>อยู่ที่ไหนอะ บอกหน่อย เดี๋ยวบอกเองว่าให้กู้ได้เท่าไหร่</h2></div>
+  <div class="button-container">
+    <button id="bangkok">กรุงเทพมหานคร</button>
+    <button id="uthai">อุทัยธานี</button>
+    <button id="thai">ประเทศไทย</button>
+  </div>
+</section>
+<section>
+  <div><p id="text"></p></div>
+  <p>เห็นความเหลื่อมล้ำไหม??</p>
+</section>
+<style>
+  body {
+    overflow:;
+    margin: 0;
+  }
+  h2 {
+    text-align: center;
+  }
+  .button-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  button {
+    margin: 5vh;
+    width: 50vh;
+    height: 7vh;
+  }
+  button.selected {
+    font-weight: bold;
+  }
+  p#text {
+    font-size: larger;
+    color: white;
+    padding-bottom: 10vh;
+  }
+  section:nth-child(1) {
+    background: linear-gradient(to bottom, blue 52%, white 48%);
+    width: 100vw;
+    color: white;
+  }
+  section:nth-child(2) {
+    margin-bottom: 20vh;
+    background: linear-gradient(to bottom, blue 52%, white 48%);
+    width: 100vw;
+  }
+  p:nth-child(2) {
+    margin: 0%;
+    padding: 0%;
+    color: blue;
+    font-size: x-large;
+  }
+</style>
