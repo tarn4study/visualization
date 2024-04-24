@@ -1,5 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import Bar from "../components/Bar.svelte";
 import Map from "../components/Map.svelte";
 import Location from "../components/Location.astro";
 import Bubble from "../components/Bubble.svelte";
@@ -15,8 +16,10 @@ const greeting = "Hi, welcome to visualization";
     <section>
       <div><Greeting /></div>
     </section>
-
     <div><Location /></div>
+    <section>
+      <div><Bar client:only="svelte" /></div>
+    </section>
     <section>
       <div id="ldr"><Map client:only="svelte" /></div>
     </section>
