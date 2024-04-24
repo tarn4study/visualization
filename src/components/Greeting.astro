@@ -1,29 +1,55 @@
 ---
-const { title } = Astro.props;
+
 ---
 
-<div id="start">
-  <h2>อยู่ที่ไหนอ่ะ บอกหน่อย เดี๋ยวบอกเองว่ากู้ได้เท่าไหร่</h2>
-</div>
+<script>
+  const button1 = document.getElementById("yes1");
+  const button2 = document.getElementById("yes2");
+
+  button1.addEventListener("click", function () {
+    document.body.style.overflow = "auto"; // Enable scrolling
+    button1.classList.add("selected");
+    button2.classList.remove("selected");
+  });
+
+  button2.addEventListener("click", function () {
+    document.body.style.overflow = "auto"; // Enable scrolling
+    button2.classList.add("selected");
+    button1.classList.remove("selected");
+  });
+</script>
+
+<div><h2>ไงคุณเจ้าของธุรกิจ อยากกู้เงินไปขยายธุรกิจไหม</h2></div>
 <div class="button-container">
-  <button class="item-1">กรุงเทพ</button><button class="item-2"
-    >อุทัยธานี</button
-  ><button class="item-3">ประเทศไทย</button>
+  <button id="yes1">อยาก</button><button id="yes2">อยากเหมือนกันแต่สีแดง</button
+  >
 </div>
+
 <style>
-  div.button-container {
-    display: grid;
-    grid-template-columns: 100px 100px 100px;
-    gap: 2rem;
-    padding: 0;
+  body {
+    overflow:;
+    margin: 0;
   }
-  .item-1 {
-    grid-column-start: 1;
+  h2 {
+    text-align: center;
   }
-  .item-2 {
-    grid-column-start: 2;
+  .button-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
   }
-  .item-3 {
-    grid-column-start: 3;
+  button {
+    margin: 5vh;
+    width: 50vh;
+    height: 7vh;
+  }
+  button.selected {
+    font-weight: bold;
+  }
+  button:nth-child(1) {
+    background-color: aqua;
+  }
+  button:nth-child(2) {
+    background-color: red;
   }
 </style>
