@@ -46,7 +46,7 @@
   let colorScale = d3
     .scaleLinear()
     .domain([0, 100])
-    .range([d3.rgb(48, 207, 208), d3.rgb(51, 8, 103)]);
+    .range([d3.rgb(51, 8, 103), d3.rgb(48, 207, 208)]);
 
   $: console.log(`color: ${d3.interpolateRdBu(0)}`);
 
@@ -88,8 +88,8 @@
         />
       </g>
       <linearGradient id="linearGradient-HighLoanMap">
-        <stop offset="0%" stop-color={d3.rgb(48, 207, 208)} />
-        <stop offset="100%" stop-color={d3.rgb(51, 8, 103)} />
+        <stop offset="0%" stop-color={d3.rgb(51, 8, 103)} />
+        <stop offset="100%" stop-color={d3.rgb(48, 207, 208)} />
       </linearGradient>
       <g class="legendLabels" font-family="sans-serif" font-size="10">
         <svg>
