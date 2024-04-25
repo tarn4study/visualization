@@ -53,12 +53,6 @@
 </script>
 
 <div id="zoom-container">
-  <h2 class="word">การกู้ ในอีกแง่หนึ่งคือการเข้าถึงแหล่งเงินทุน</h2>
-  <h3 class="word">
-    ถ้าเศรษฐกิจทุกจังหวัดดีเหมือนกัน
-    อัตราส่วนการฝากและการกู้ในแต่ละจังหวัดควรจะใกล้ ๆ กัน
-  </h3>
-
   <div>
     <svg id="ldr" {width} {height} viewBox="500 275 300 25">
       {#each provinces as { path, properties }}
@@ -114,9 +108,6 @@
   }
   #ldr {
     transform: scale(1);
-  }
-  .word {
-    text-align: center;
   }
   p {
     margin-top: -8%;
