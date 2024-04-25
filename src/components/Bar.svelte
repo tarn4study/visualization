@@ -10,13 +10,8 @@
   onMount(fetchData);
 </script>
 
-<div style="min-height:600px">
-  <script
-    type="text/javascript"
-    defer
-    src="https://datawrapper.dwcdn.net/2Ucxe/embed.js?v=9"
-    charset="utf-8"
-  ></script><noscript><img src="/bar.png" alt="" /></noscript>
+<div style="min-height:100px">
+  <img src="/bar.png" alt="" />
 </div>
 
 {#if chartData}
