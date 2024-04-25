@@ -1,6 +1,6 @@
 <script>
   import * as d3 from "d3";
-  let width = 800;
+  let width = 1380;
   let height = 600;
 
   const geojsonPath =
@@ -37,8 +37,6 @@
       d3.interpolateRdBu(1),
     ]);
 
-  $: console.log(`color: ${d3.interpolateRdBu(0)}`);
-
   let provinces = [];
   $: if (geojson)
     provinces = geojson.features.map((feature) => {
@@ -49,7 +47,9 @@
     });
   $: console.log(provinces);
   let name = null;
-  // 225 200 200 200 scale 1.5
+  // 300 200 50 200 scale 1.5
+
+  const svg = document.getElementById("ldr");
 </script>
 
 <div id="zoom-container">
@@ -60,7 +60,7 @@
   </h3>
 
   <div>
-    <svg id="ldr" {width} {height} viewBox="300 200 50 200">
+    <svg id="ldr" {width} {height} viewBox="500 275 300 25">
       {#each provinces as { path, properties }}
         <path
           d={path}
@@ -71,8 +71,8 @@
         />
       {/each}
     </svg>
-    <svg id="legend-container">
-      <g class="legend" transform={`translate(0, 0)`}>
+    <svg {width}>
+      <g class="legend" transform={`translate(575, 0)`}>
         <g transform="translate(10,0)">
           <rect width="200" height="18" style="fill: url(#linearGradient)" />
         </g>
@@ -94,6 +94,7 @@
         </g>
       </g>
     </svg>
+    <p>แผนที่แสดงอัตราส่วนสินเชื่อต่อเงินฝาก</p>
   </div>
 </div>
 
@@ -114,10 +115,12 @@
   #ldr {
     transform: scale(1);
   }
-  #legend-container {
-    background-color: white;
-  }
   .word {
+    text-align: center;
+  }
+  p {
+    margin-top: -8%;
+    margin-bottom: 7%;
     text-align: center;
   }
 </style>

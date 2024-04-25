@@ -106,9 +106,27 @@
       .attr("fill", (d) => colorScale(d.bank))
       .attr("stroke-width", 0)
       .on("mouseover", function (event, d) {
-        tooltip.style.display = "block"; // Show tooltip
-        tooltip.innerHTML = `<b>ผู้ถือหุ้นรายใหญ่:</b> ${d.share}`; // Update content
-        const x = event.pageX + 10; // Adjust position based on mouse
+        tooltip.style.display = "block";
+        const highlightWord = "พระบาทสมเด็จพระวชิรเกล้าเจ้าอยู่หัว";
+        let highlightedText = `<b>ผู้ถือหุ้นรายใหญ่:</b> `;
+        if (d.share.includes(highlightWord)) {
+          const parts = d.share.split(new RegExp(highlightWord, "gis"));
+          console.log(parts);
+          highlightedText += parts
+            .map((part) => {
+              if (part === highlightWord) {
+                return `<span style="color: yellow; font-weight: bold;">${part}</span>`;
+              } else {
+                return part;
+              }
+            })
+            .join("");
+        } else {
+          highlightedText += d.share;
+        }
+
+        tooltip.innerHTML = highlightedText;
+        const x = event.pageX + 10;
         const y = event.pageY + 10;
         tooltip.style.left = `${x}px`;
         tooltip.style.top = `${y}px`;

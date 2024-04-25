@@ -46,7 +46,7 @@
   let colorScale = d3
     .scaleLinear()
     .domain([0, 100])
-    .range([d3.rgb(51, 8, 103), d3.rgb(48, 207, 208)]);
+    .range([d3.interpolateRdBu(0), d3.interpolateRdBu(0.5)]);
 
   $: console.log(`color: ${d3.interpolateRdBu(0)}`);
 
@@ -71,7 +71,7 @@
         d={path}
         fill={ldrDictDep[properties.name] > ldrDictLoan[properties.name]
           ? colorScale(ldrDict[properties.name])
-          : d3.rgb(211, 211, 211)}
+          : d3.rgb(192, 192, 192)}
         class:active={name === properties.name}
         on:mouseenter={() => (name = properties.name)}
         role="presentation"
@@ -88,8 +88,8 @@
         />
       </g>
       <linearGradient id="linearGradient-HighLoanMap">
-        <stop offset="0%" stop-color={d3.rgb(51, 8, 103)} />
-        <stop offset="100%" stop-color={d3.rgb(48, 207, 208)} />
+        <stop offset="0%" stop-color={d3.interpolateRdBu(0)} />
+        <stop offset="100%" stop-color={d3.interpolateRdBu(0.5)} />
       </linearGradient>
       <g class="legendLabels" font-family="sans-serif" font-size="10">
         <svg>

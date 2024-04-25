@@ -70,9 +70,9 @@
       <path
         d={path}
         fill={ldrDictLoan[properties.name] > ldrDictDep[properties.name] &&
-        ldrDictDep[properties.name] > 221159.92
+        ldrDictDep[properties.name] > 236728.9
           ? colorScale(ldrDict[properties.name])
-          : d3.rgb(211, 211, 211)}
+          : d3.rgb(192, 192, 192)}
         class:active={name === properties.name}
         on:mouseenter={() => (name = properties.name)}
         role="presentation"
@@ -101,13 +101,13 @@
         </svg>
       </g>
       <g transform="translate(10,40)">
-        <rect width="18" height="18" style="fill: rgb(211, 211, 211)" />
+        <rect width="18" height="18" style="fill: rgb(192, 192, 192)" />
       </g>
       <g class="legendLabels" font-family="sans-serif" font-size="10">
         <svg>
           <g transform="translate(130,25)">
-            <text x="10" y="30" dx=".3em" text-anchor="end">
-              deoposit more than loan
+            <text x="140" y="30" dx=".3em" text-anchor="end">
+              deoposit more than loan or deposit more than average
             </text>
           </g>
         </svg>
