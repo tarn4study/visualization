@@ -16,11 +16,14 @@ body {
     align-items: center; /* Center elements vertically */
     font-size: 14px;
     font-family: 'Kanit', sans-serif;
-    color: rgb(89, 0, 255);
+    color: blue;
     margin: 0;
     padding: 0;
   }
 
+  h1 {
+    font-family: 'Chonburi';
+  }
   
 section {
     min-height: 100vh;
