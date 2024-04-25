@@ -1,78 +1,78 @@
 province,loan,deposit
-Bangkok,10602503,13567663
-Kanchanaburi,55753,32528
-Chanthaburi,81653,35475
-Chachoengsao,99691,70299
-Chon Buri,594949,460466
-Chai Nat,17940,11764
-Trat,22387,9942
-Nakhon Nayok,23047,9732
-Nakhon Pathom,231313,129181
-Nonthaburi,638926,278016
-Pathum Thani,350024,201897
-Prachuap Khiri Khan,67805,38628
-Prachin Buri,46154,35954
-Phra Nakhon Si Ayutthaya,129859,94162
-Phetchaburi,36895,24192
-Rayong,179860,165448
-Ratchaburi,101733,64101
-Lop Buri,53294,38667
-Samut Prakan,582512,315658
-Samut Songkhram,22683,9344
-Samut Sakhon,203744,115957
-Sa Kaeo,28835,18395
-Saraburi,84321,58221
-Sing Buri,18886,9416
-Suphan Buri,67302,39597
-Ang Thong,18495,9384
-Kalasin,25013,26195
-Khon Kaen,133142,156543
-Chaiyaphum,31498,25599
-Nakhon Phanom,21463,17405
-Nakhon Ratchasima,187456,183097
-Bueng Kan,9292,11300
-Buriram,49835,42379
-Maha Sarakham,35946,30405
-Mukdahan,15236,15638
-Yasothon,17061,18584
-Roi Et,39524,59051
-Loei,24256,22265
-Sisaket,38386,38796
-Sakon Nakhon,36357,42084
-Surin,43900,49468
-Nong Khai,27661,22603
-Nong Bua Lamphu,14110,12892
-Amnat Charoen,8943,10300
-Udon Thani,103085,98587
-Ubon Ratchathani,85874,102804
-Kamphaeng Phet,29906,30544
-Chiang Rai,90149,67367
-Chiang Mai,304028,214348
-Tak,33673,20444
-Nakhon Sawan,68761,69495
-Nan,16642,11506
-Phayao,20818,15170
-Phichit,27471,15240
-Phitsanulok,64373,65448
-Phetchabun,37597,34811
-Phrae,19273,15644
-Mae Hong Son,7648,5353
-Lampang,42581,32064
-Lamphun,27005,18092
-Sukhothai,25030,12136
-Uttaradit,19917,18999
-Uthai Thani,16649,5332
-Krabi,34371,43756
-Chumphon,49977,30226
-Trang,42635,41910
-Nakhon Si Thammarat,88462,86614
-Narathiwat,22591,12077
-Pattani,21948,12040
-Phangnga,21104,12353
-Phatthalung,20855,16759
-Phuket,188420,185710
-Yala,34095,18165
-Ranong,20513,7442
-Songkhla,180715,154664
-Satun,10351,8233
-Suratthani,133154,116100
+Bangkok,13567663,10602503
+Kanchanaburi,32528,55753
+Chanthaburi,35475,81653
+Chachoengsao,70299,99691
+Chon Buri,460466,594949
+Chai Nat,11764,17940
+Trat,9942,22387
+Nakhon Nayok,9732,23047
+Nakhon Pathom,129181,231313
+Nonthaburi,278016,638926
+Pathum Thani,201897,350024
+Prachuap Khiri Khan,38628,67805
+Prachin Buri,35954,46154
+Phra Nakhon Si Ayutthaya,94162,129859
+Phetchaburi,24192,36895
+Rayong,165448,179860
+Ratchaburi,64101,101733
+Lop Buri,38667,53294
+Samut Prakan,315658,582512
+Samut Songkhram,9344,22683
+Samut Sakhon,115957,203744
+Sa Kaeo,18395,28835
+Saraburi,58221,84321
+Sing Buri,9416,18886
+Suphan Buri,39597,67302
+Ang Thong,9384,18495
+Kalasin,26195,25013
+Khon Kaen,156543,133142
+Chaiyaphum,25599,31498
+Nakhon Phanom,17405,21463
+Nakhon Ratchasima,183097,187456
+Bueng Kan,11300,9292
+Buriram,42379,49835
+Maha Sarakham,30405,35946
+Mukdahan,15638,15236
+Yasothon,18584,17061
+Roi Et,59051,39524
+Loei,22265,24256
+Sisaket,38796,38386
+Sakon Nakhon,42084,36357
+Surin,49468,43900
+Nong Khai,22603,27661
+Nong Bua Lamphu,12892,14110
+Amnat Charoen,10300,8943
+Udon Thani,98587,103085
+Ubon Ratchathani,102804,85874
+Kamphaeng Phet,30544,29906
+Chiang Rai,67367,90149
+Chiang Mai,214348,304028
+Tak,20444,33673
+Nakhon Sawan,69495,68761
+Nan,11506,16642
+Phayao,15170,20818
+Phichit,15240,27471
+Phitsanulok,65448,64373
+Phetchabun,34811,37597
+Phrae,15644,19273
+Mae Hong Son,5353,7648
+Lampang,32064,42581
+Lamphun,18092,27005
+Sukhothai,12136,25030
+Uttaradit,18999,19917
+Uthai Thani,5332,16649
+Krabi,43756,34371
+Chumphon,30226,49977
+Trang,41910,42635
+Nakhon Si Thammarat,86614,88462
+Narathiwat,12077,22591
+Pattani,12040,21948
+Phangnga,12353,21104
+Phatthalung,16759,20855
+Phuket,185710,188420
+Yala,18165,34095
+Ranong,7442,20513
+Songkhla,154664,180715
+Satun,8233,10351
+Suratthani,116100,133154
