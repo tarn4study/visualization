@@ -1,7 +1,7 @@
 <script>
   import * as d3 from "d3";
-  let width = 800;
-  let height = 600;
+  export let width = 800;
+  export let height = 600;
 
   const geojsonPath =
     "https://raw.githubusercontent.com/tarn4study/visualization/master/src/data/thaimap.json";
@@ -47,7 +47,7 @@
 </script>
 
 <div><h3>จำนวนการจ้างงานในแต่ละจังหวัด</h3></div>
-<div>
+<div id="employ-container">
   <svg id="employ" {width} {height}>
     {#each provinces as { path, properties }}
       <path
@@ -105,5 +105,9 @@
   #legend-container-employ {
     z-index: 1;
     position: relative;
+  }
+  #employ-container {
+    display: flex;
+    flex-direction: column;
   }
 </style>
