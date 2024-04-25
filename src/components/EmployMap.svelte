@@ -18,7 +18,7 @@
     employdata = data;
 
     employdata.forEach((dataPoint) => {
-      employDict[dataPoint.province] = dataPoint.count;
+      employDict[dataPoint.province] = dataPoint.log;
     });
   });
 
@@ -30,7 +30,7 @@
 
   let colorScale = d3
     .scaleLinear()
-    .domain([20605, 3494938])
+    .domain([9.5, 15.5])
     .range([d3.rgb(192, 200, 252), d3.rgb(0, 34, 252)]);
 
   let provinces = [];
@@ -76,8 +76,13 @@
       <g class="legendLabels" font-family="sans-serif" font-size="10">
         <svg>
           <g transform="translate(10,0)">
-            <text x="25" y="30" dx=".3em" text-anchor="end"> 20,605 </text>
-            <text x="227" y="30" dx=".3em" text-anchor="end"> 3,494,938 </text>
+            <text x="10" y="30" dx=".3em" text-anchor="end"> 9.5 </text>
+            <text x="212" y="30" dx=".3em" text-anchor="end"> 15.5 </text>
+          </g>
+          <g transform="translate(10,0)">
+            <text x="170" y="40" dx=".3em" text-anchor="end"
+              >log ของจำนวนการจ้างงานใน SME
+            </text>
           </g>
         </svg>
       </g>

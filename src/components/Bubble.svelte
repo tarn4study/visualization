@@ -107,20 +107,19 @@
       .attr("stroke-width", 0)
       .on("mouseover", function (event, d) {
         tooltip.style.display = "block";
-        const highlightWord = "พระบาทสมเด็จพระวชิรเกล้าเจ้าอยู่หัว";
-        let highlightedText = `<b>ผู้ถือหุ้นรายใหญ่:</b> `;
+        const highlightWord = `พระบาทสมเด็จพระวชิรเกล้าเจ้าอยู่หัว`;
+        let highlightedText = `<b>ธนาคาร:</b> ${d.bank}<br><b>ผู้ถือหุ้นรายใหญ่:</b> `;
         if (d.share.includes(highlightWord)) {
-          const parts = d.share.split(new RegExp(highlightWord, "gis"));
-          console.log(parts);
+          const parts = d.share.split("<br>\n");
           highlightedText += parts
             .map((part) => {
               if (part === highlightWord) {
-                return `<span style="color: yellow; font-weight: bold;">${part}</span>`;
+                return `<span style="color: rgb(204,204,0); font-weight: bold;">${part}</span>`;
               } else {
                 return part;
               }
             })
-            .join("");
+            .join("<br>\n");
         } else {
           highlightedText += d.share;
         }
@@ -160,10 +159,26 @@
   หากมีจำนวนธนาคารมากกว่านี้ การแข่งขันในการปล่อยกู้ก็จะสูงขึ้นกว่าปัจจุบัน
   ส่งผลให้ต่างจังหวัดเข้าถึงแหล่งทุนได้มากขึ้น
 </h3>
-<div id="chart"></div>
+<div id="bubble-container">
+  <div id="chart"></div>
+  <div id="paragraph-container">
+    <p>แค่ธนาคาร 5 อันดับแรกก็คิดเป็น 75.8% ของ Market Cap แล้ว!</p>
+  </div>
+</div>
+
 <div id="tooltip"></div>
 
 <style>
+  #bubble-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+  }
+  #paragraph-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
   #tooltip {
     position: absolute;
     background-color: white;
@@ -176,6 +191,8 @@
     font-size: 3vh;
   }
   #chart {
-    margin-left: 90px;
+    margin-left: -100px;
+    margin-right: -60px;
+    padding-right: -30px;
   }
 </style>
