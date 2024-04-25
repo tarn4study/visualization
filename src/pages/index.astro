@@ -26,6 +26,9 @@ const greeting = "Hi, welcome to visualization";
       <div id="ldr"><Map client:only="svelte" /></div>
     </section>
     <section>
+      <h1>ใกล้กัน?</h1>
+    </section>
+    <section>
       <div><Bar client:only="svelte" /></div>
     </section>
     <section>
@@ -44,6 +47,13 @@ const greeting = "Hi, welcome to visualization";
   section:nth-child(1) {
     background: linear-gradient(to bottom, blue 52%, white 48%);
     width: 100vw;
+    color: white;
+  }
+  section:nth-child(5) {
+    background: blue;
+  }
+  h1:first-child {
+    font-size: 30vh;
     color: white;
   }
 </style>
