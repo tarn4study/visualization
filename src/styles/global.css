@@ -14,8 +14,14 @@ body {
     display: flex; /* Make body a flex container */
     justify-content: center; /* Center elements horizontally */
     align-items: center; /* Center elements vertically */
+    font-size: 14px;
+    font-family: 'Kanit', sans-serif;
+    color: rgb(89, 0, 255);
+    margin: 0;
+    padding: 0;
   }
 
+  
 section {
     min-height: 100vh;
     display: flex;

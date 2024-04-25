@@ -3,6 +3,7 @@ import Layout from "../layouts/Layout.astro";
 import Bar from "../components/Bar.svelte";
 import Map from "../components/Map.svelte";
 import Location from "../components/Location.astro";
+import Bank from "../components/Bank.astro";
 import Bubble from "../components/Bubble.svelte";
 import EmployMap from "../components/EmployMap.svelte";
 import LdrMap from "../components/LdrMap.svelte";
@@ -19,6 +20,9 @@ const greeting = "Hi, welcome to visualization";
       <div><Greeting /></div>
     </section>
     <div><Location /></div>
+    <section>
+      <div><Bank /></div>
+    </section>
     <section>
       <div><Bar client:only="svelte" /></div>
     </section>
