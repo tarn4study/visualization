@@ -26,7 +26,33 @@ const greeting = "Hi, welcome to visualization";
       <div id="ldr"><Map client:only="svelte" /></div>
     </section>
     <section>
+      <h1>ใกล้กัน?</h1>
+    </section>
+    <section>
+      <div>
+        <h2>
+          ตั้งแต่ปี 2550 ที่ผ่านมา อัตราส่วนสินเชื่อต่อเงินฝาก เพิ่มมาแค่ %
+        </h2>
+      </div>
+      <div><h2>แต่อัตราส่วนเงินกู้ต่อเงินฝากของกรุงเทพ เพิ่มมาเป็น %</h2></div>
       <div><Bar client:only="svelte" /></div>
+      <div
+        class="tenor-gif-embed"
+        data-postid="17552382"
+        data-share-method="host"
+        data-aspect-ratio="1.52381"
+        data-width="25%"
+      >
+        <a
+          href="https://tenor.com/view/blow-mind-mind-blown-explode-gif-17552382"
+          >Blow Mind Mind Blown GIF</a
+        >from <a href="https://tenor.com/search/blow+mind-gifs"
+          >Blow Mind GIFs</a
+        >
+      </div>
+      <script type="text/javascript" async src="https://tenor.com/embed.js"
+      ></script>
+      <div><h2 id="meme">ไม่จ้างก็เข้ากรุงเทพสิครับพี่น้อง</h2></div>
     </section>
     <section>
       <div><EmployMap client:only="svelte" /></div>
@@ -35,6 +61,15 @@ const greeting = "Hi, welcome to visualization";
       <div><Bubble client:visible /></div>
     </section>
     <section>
+      <div>
+        <h3>
+          แทนที่เงินฝากของคนต่างจังหวัด จะถูกนำมาหมุนเวียนในจังหวัดตัวเอง
+          ทำไมเงินของคนจังหวัด สุโขทัย พิจิตร ระนอง หรือ
+          จังหวัดอื่นๆต้องถูกเอาไปให้คนกรุงเทพกู้? สรุปแล้ว เรื่องเงินฝาก
+          ก็เหมือนเรื่องภาษีหรืออีกหลายๆเรื่อง ที่ทรัพยากรต่างจังหวัด
+          ต้องถูกโยกไปให้ส่วนกลางอย่างกรุงเทพ ทำให้เกิดความเหลื่อมล้ำทางการพัฒนา
+        </h3>
+      </div>
       <div><DynamicChart client:only="svelte" /></div>
     </section>
   </main>
@@ -45,6 +80,22 @@ const greeting = "Hi, welcome to visualization";
     background: linear-gradient(to bottom, blue 52%, white 48%);
     width: 100%;
     color: white;
+  }
+  section:nth-child(5) {
+    background: blue;
+  }
+  h1:first-child {
+    font-size: 30vh;
+    color: white;
+  }
+  #meme {
+    margin-bottom: 10%;
+    margin-top: 5%;
+  }
+  h3 {
+    text-align: center;
+    width: 80vw;
+    margin-bottom: 2%;
   }
 </style>
 

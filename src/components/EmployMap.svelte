@@ -46,7 +46,6 @@
   // 125 150 400 300 scale 1.5
 </script>
 
-<div><h3>จำนวนการจ้างงานในแต่ละจังหวัด</h3></div>
 <div id="employ-container">
   <svg id="employ" {width} {height}>
     {#each provinces as { path, properties }}
@@ -83,6 +82,7 @@
       </g>
     </g>
   </svg>
+  <div><h3>จำนวนการจ้างงานในแต่ละจังหวัด</h3></div>
 </div>
 
 <style>
@@ -109,5 +109,12 @@
   #employ-container {
     display: flex;
     flex-direction: column;
+    margin-bottom: 0%;
+  }
+  h3 {
+    text-align: center;
+    margin-top: -15%;
+    padding-top: 0%;
+    font-size: 2em;
   }
 </style>
