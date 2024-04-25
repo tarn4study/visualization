@@ -2,13 +2,11 @@
 import Layout from "../layouts/Layout.astro";
 import Bar from "../components/Bar.svelte";
 import Map from "../components/Map.svelte";
-import Location from "../components/Location.astro";
 import Bank from "../components/Bank.astro";
 import Bubble from "../components/Bubble.svelte";
 import EmployMap from "../components/EmployMap.svelte";
 import Greeting from "../components/Greeting.astro";
 import DynamicChart from "../components/DynamicChart.svelte";
-
 const greeting = "Hi, welcome to visualization";
 ---
 
@@ -17,7 +15,6 @@ const greeting = "Hi, welcome to visualization";
     <section>
       <div><Greeting /></div>
     </section>
-    <div><Location /></div>
     <section>
       <div><Bank /></div>
     </section>
@@ -76,11 +73,12 @@ const greeting = "Hi, welcome to visualization";
 </Layout>
 
 <style>
-  section:nth-child(1) {
+    section:nth-child(1) {
     background: linear-gradient(to bottom, blue 52%, white 48%);
-    width: 100%;
+    width: 100vw;
     color: white;
   }
+
   section:nth-child(5) {
     background: blue;
   }
@@ -98,7 +96,7 @@ const greeting = "Hi, welcome to visualization";
     margin-bottom: 2%;
   }
 </style>
-
+<script is:inline src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
 <!-- <style>
   main {
     margin: auto;

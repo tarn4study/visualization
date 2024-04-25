@@ -1,28 +1,65 @@
 ---
 
 ---
-
 <script>
   const button1 = document.getElementById("yes1");
   const button2 = document.getElementById("yes2");
+  const button3 = document.getElementById("bangkok");
+  const button4 = document.getElementById("uthai");
+  const button5 = document.getElementById("thai");
+  const text = document.getElementById("text");
 
-  button1.addEventListener("click", function () {
-    document.body.style.overflow = "auto"; // Enable scrolling
+  
+  button1.addEventListener("click", function() {
     button1.classList.add("selected");
-    button2.classList.remove("selected");
+    $(".step2").css("display", "unset");
+    $(".step1").css("display", "none");
   });
 
-  button2.addEventListener("click", function () {
-    document.body.style.overflow = "auto"; // Enable scrolling
-    button2.classList.add("selected");
-    button1.classList.remove("selected");
+  button2.addEventListener("click", function() {
+    button1.classList.add("selected");
+    $(".step2").css("display", "unset");
+    $(".step1").css("display", "none");
+  });
+
+  button3.addEventListener("click", function () {
+    button3.classList.add("selected");
+    text.textContent =
+      "สวัสดีคนกรุงเทพ เราให้คุณกู้ได้ 128% ของเงินฝากละกัน ในขณะที่คนอุทัยธานีมีให้กู้ประมาณ 32% ของเงินฝาก และคนไทยเฉลี่ยทั้งประเทศกู้ได้ประมาณ 107% ของเงินฝาก";
+  });
+
+  button4.addEventListener("click", function () {
+    button4.classList.add("selected");
+    text.textContent =
+      "สวัสดีคนอุทัยธานี เราให้คุณกู้ได้แค่ 32% ของเงินฝากนะ เสียดาย ถ้าคุณเป็นคนกรุงเทพ คุณจะกู้ได้ถึง 128% ของเงินฝาก แล้วคนไทยเฉลี่ยทั้งประเทศยังกู้ได้ประมาณ 107% ของเงินฝาก";
+  });
+
+  button5.addEventListener("click", function () {
+    button5.classList.add("selected");
+    text.textContent =
+      "สวัสดีคนไทย เราให้คุณกู้ได้ 107% ของเงินฝากนะ เสียดาย ถ้าคุณเป็นคนกรุงเทพ คุณจะกู้ได้ถึง 128% ของเงินฝาก แต่ถ้าคุณเป็นคนอุทัยธานี คุณจะกู้ได้ประมาณ 32% ของเงินฝาก";
   });
 </script>
 
-<div class = main_header><h2>ไงคุณเจ้าของธุรกิจ อยากกู้เงินไปขยายธุรกิจไหม</h2></div>
-<div class="button-container">
-  <button id="yes1">อยาก</button><button id="yes2">อยาก อยาก อยาก อยาก อยาก</button
-  >
+<div class = step1>
+  <div class = main_header><h2>ไงคุณเจ้าของธุรกิจ อยากกู้เงินไปขยายธุรกิจไหม</h2></div>
+    <div class="button-container">
+      <button id="yes1">อยาก</button><button id="yes2">อยาก อยาก อยาก อยาก อยาก</button>
+    </div>
+</div>
+<div class = step2>
+  <section>
+    <div class = main_header><h2>อยู่ที่ไหนอะ บอกหน่อย เดี๋ยวบอกเองว่าให้กู้ได้เท่าไหร่</h2></div>
+    <div class="button-container">
+      <button id="bangkok">กรุงเทพมหานคร</button>
+      <button id="uthai">อุทัยธานี</button>
+      <button id="thai">ประเทศไทย</button>
+    </div>
+  </section>
+  <section>
+    <div><p id="text"></p></div>
+    <p>เห็นความเหลื่อมล้ำไหม??</p>
+  </section>
 </div>
 
 <style>
@@ -50,6 +87,7 @@
   color: #ffffff; 
   text-shadow: 5px 1px 2px rgba(0, 0, 2, 0.2); /* Add a subtle shadow */
   }
+
   .button-container button {
   margin: 5vh;
   width: 70vh;
@@ -59,7 +97,6 @@
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
 }
 
 /* For screens wider than 768px, use a larger font size */
@@ -69,14 +106,17 @@
   }
 }
 
-
-  .button-container button:hover {
-  background-color: #f0f0f0; /* Change background color on hover */
-  }
-
   button.selected {
     font-weight: bold;
+    background-color: #ddd;
   }
+
+  .button-container button:hover {
+  background-color: #ddd; /* Change background color on hover (lighter shade) */
+  /* Add a slight shadow on hover */
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
   .button-container button:nth-child(1) {
   background-color: aqua;
   }
@@ -85,4 +125,20 @@
   background-color: coral;
   }
 
+  p#text {
+    font-size: larger;
+    color: rgb(0, 0, 0);
+    padding-bottom: 10vh;
+  }
+
+  p:nth-child(2) {
+    margin: 0%;
+    padding: 0%;
+    color: blue;
+    font-size: x-large;
+  }
+
+  .step2{
+    display:none;
+  }
 </style>

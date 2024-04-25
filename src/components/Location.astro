@@ -3,41 +3,41 @@
 ---
 
 <script>
-  const button1 = document.getElementById("bangkok");
-  const button2 = document.getElementById("uthai");
-  const button3 = document.getElementById("thai");
+  const button3 = document.getElementById("bangkok");
+  const button4 = document.getElementById("uthai");
+  const button5 = document.getElementById("thai");
   const text = document.getElementById("text");
-
-  button1.addEventListener("click", function () {
-    document.body.style.overflow = "auto"; // Enable scrolling
-    button1.classList.add("selected");
-    button2.classList.remove("selected");
-    button3.classList.remove("selected");
-    text.textContent =
-      "สวัสดีคนกรุงเทพ เราให้คุณกู้ได้ 128% ของเงินฝากละกัน ในขณะที่คนอุทัยธานีมีให้กู้ประมาณ 32% ของเงินฝาก และคนไทยเฉลี่ยทั้งประเทศกู้ได้ประมาณ 107% ของเงินฝาก";
-  });
-
-  button2.addEventListener("click", function () {
-    document.body.style.overflow = "auto"; // Enable scrolling
-    button2.classList.add("selected");
-    button1.classList.remove("selected");
-    button3.classList.remove("selected");
-    text.textContent =
-      "สวัสดีคนอุทัยธานี เราให้คุณกู้ได้แค่ 32% ของเงินฝากนะ เสียดาย ถ้าคุณเป็นคนกรุงเทพ คุณจะกู้ได้ถึง 128% ของเงินฝาก แล้วคนไทยเฉลี่ยทั้งประเทศยังกู้ได้ประมาณ 107% ของเงินฝาก";
-  });
 
   button3.addEventListener("click", function () {
     document.body.style.overflow = "auto"; // Enable scrolling
     button3.classList.add("selected");
-    button2.classList.remove("selected");
-    button1.classList.remove("selected");
+    button4.classList.remove("selected");
+    button5.classList.remove("selected");
+    text.textContent =
+      "สวัสดีคนกรุงเทพ เราให้คุณกู้ได้ 128% ของเงินฝากละกัน ในขณะที่คนอุทัยธานีมีให้กู้ประมาณ 32% ของเงินฝาก และคนไทยเฉลี่ยทั้งประเทศกู้ได้ประมาณ 107% ของเงินฝาก";
+  });
+
+  button4.addEventListener("click", function () {
+    document.body.style.overflow = "auto"; // Enable scrolling
+    button4.classList.add("selected");
+    button3.classList.remove("selected");
+    button5.classList.remove("selected");
+    text.textContent =
+      "สวัสดีคนอุทัยธานี เราให้คุณกู้ได้แค่ 32% ของเงินฝากนะ เสียดาย ถ้าคุณเป็นคนกรุงเทพ คุณจะกู้ได้ถึง 128% ของเงินฝาก แล้วคนไทยเฉลี่ยทั้งประเทศยังกู้ได้ประมาณ 107% ของเงินฝาก";
+  });
+
+  button5.addEventListener("click", function () {
+    document.body.style.overflow = "auto"; // Enable scrolling
+    button5.classList.add("selected");
+    button4.classList.remove("selected");
+    button3.classList.remove("selected");
     text.textContent =
       "สวัสดีคนไทย เราให้คุณกู้ได้ 107% ของเงินฝากนะ เสียดาย ถ้าคุณเป็นคนกรุงเทพ คุณจะกู้ได้ถึง 128% ของเงินฝาก แต่ถ้าคุณเป็นคนอุทัยธานี คุณจะกู้ได้ประมาณ 32% ของเงินฝาก";
   });
 </script>
 
 <section>
-  <div><h2>อยู่ที่ไหนอะ บอกหน่อย เดี๋ยวบอกเองว่าให้กู้ได้เท่าไหร่</h2></div>
+  <div class = main_header><h2>อยู่ที่ไหนอะ บอกหน่อย เดี๋ยวบอกเองว่าให้กู้ได้เท่าไหร่</h2></div>
   <div class="button-container">
     <button id="bangkok">กรุงเทพมหานคร</button>
     <button id="uthai">อุทัยธานี</button>
@@ -48,6 +48,7 @@
   <div><p id="text"></p></div>
   <p>เห็นความเหลื่อมล้ำไหม??</p>
 </section>
+
 <style>
   body {
     overflow:;
@@ -56,19 +57,52 @@
   h2 {
     text-align: center;
   }
+  .main_header {
+  text-align: center;
+  margin-bottom: 20px;
+  } 
+
+  .main_header h2 {
+  font-size: 2.4rem; 
+  font-weight: bold;
+  color: #ffffff; 
+  text-shadow: 5px 1px 2px rgba(0, 0, 2, 0.2); /* Add a subtle shadow */
+  }
+  
   .button-container {
     display: flex;
     flex-direction: row;
     justify-content: center;
   }
-  button {
-    margin: 5vh;
-    width: 50vh;
-    height: 7vh;
+  
+  .button-container button {
+  margin: 5vh;
+  width: 50vh;
+  height: 20vh;
+  margin-right: 40px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* For screens wider than 768px, use a larger font size */
+@media (min-width: 768px) {
+  .button-container button {
+    font-size: 2.2rem;
   }
+}
+
   button.selected {
     font-weight: bold;
   }
+
+  .button-container button:hover {
+  background-color: #ddd; /* Change background color on hover (lighter shade) */
+  /* Add a slight shadow on hover */
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
   p#text {
     font-size: larger;
     color: white;
@@ -76,7 +110,7 @@
   }
   section:nth-child(1) {
     background: linear-gradient(to bottom, blue 70%, white 48%);
-    width: 100vw;
+    width: 100%;
     color: white;
   }
   section:nth-child(2) {
