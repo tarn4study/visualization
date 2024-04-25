@@ -1,13 +1,187 @@
-bank,cap
-bay,193088.75
-bbl,264374.74
-cimbt,18804.02
-credit,33525.38
-kbank,293796.62
-kkp,43396.47
-ktb,223616.98
-lhfg,20759.99
-scb,346812.05
-tcap,51119.44
-tisco,79464.08
-ttb,173188.20
+bank,cap,share
+bay,193088.75,"MUFG BANK, LTD.<br>
+บริษัท สตรองโฮลด์ แอสเซ็ทส์ จำกัด<br>
+บริษัท ทุนมหาโชค จำกัด<br>
+บริษัท จี แอล แอสเซทส์ จำกัด<br>
+บริษัท บีบีทีวี แซทเทลวิชั่น จำกัด<br>
+บริษัท บีบีทีวี แอสเซตแมเนจเมนท์ จำกัด<br>
+บริษัท กรุงเทพโทรทัศน์และวิทยุ จำกัด<br>
+บริษัท มหากิจโฮลดิ้ง จำกัด<br>
+บริษัท ทุนรุ่งเรือง จำกัด<br>
+บริษัท ซุปเปอร์ แอสเซทส์ จำกัด<br>
+บริษัท ซี.เค.อาร์ จำกัด"
+bbl,264374.74,"บริษัท ไทยเอ็นวีดีอาร์ จำกัด<br>
+บริษัท ซิตี้เรียลตี้ จำกัด<br>
+สำนักงานประกันสังคม<br>
+THE BANK OF NEW YORK MELLON<br>
+STATE STREET EUROPE LIMITED<br>
+UOB KAY HIAN (HONG KONG) LIMITED - Client Account<br>
+บริษัท กรุงเทพประกันภัย จำกัด (มหาชน)<br>
+STATE STREET BANK AND TRUST COMPANY<br>
+SOUTH EAST ASIA UK (TYPE C) NOMINEES LIMITED<br>
+STATE STREET BANK AND TRUST COMPANY<br>
+BNY MELLON NOMINEES LIMITED<br>
+HSBC BANK PLC-PRUDENTIAL ASSURANCE COMPANY LIMITED<br>
+นาย ชาตรี โสภณพนิช<br>
+บริษัท กรุงเทพประกันชีวิต จำกัด (มหาชน)<br>
+MORGAN STANLEY & CO. INTERNATIONAL PLC<br>
+NORTRUST NOMINEES LIMITED-NTC-CLIENTS ACCOUNT<br>
+ธนาคาร ออมสิน<br>
+PHILLIP SECURITIES PTE LTD.<br>
+กองทุนเปิด บัวหลวงหุ้นระยะยาว<br>
+บริษัท ไสวประภาสและบุตร จำกัด<br>
+บริษัท ชาเตรียนโฮลดิ้ง จำกัด<br>
+SELANGOR HOLDINGS INC.<br>
+กองทุนรวม วายุภักษ์หนึ่ง"
+cimbt,18804.02,"CIMB BANK BERHARD<br>
+BANK JULIUS BAER & CO. LTD, SINGAPORE<br>
+บริษัท ไทยเอ็นวีดีอาร์ จำกัด<br>
+นาย สุชัยชาญ วงศ์ปิยะบวร<br>
+นาย ประชา ชัยสุวรรณ<br>
+นาย สินธุ วงศ์ปิยะบวร<br>
+นาย พิสิฐ พฤกษ์ไพบูลย์<br>
+นาย ณัฐวุฒิ วชิรไชยภักดิ์<br>
+นาย สมชาติ นำศรีเจริญสุข<br>
+กองทุนเปิด ไทยพาณิชย์ SET BANKING SECTOR INDEX"
+credit,33525.38,"บริษัท วี เอ็น บี โฮลดิ้ง จำกัด<br>
+บริษัท ไทยประกันชีวิต จำกัด (มหาชน)<br>
+OCA Investment Holdings I Pte. Ltd.<br>
+นาย วิญญู ไชยวรรณ<br>
+SOUTH EAST ASIA UK (TYPE A) NOMINEES LIMITED<br>
+MORGAN STANLEY & CO. INTERNATIONAL PLC<br>
+นาง มิจิตรา กุนารา<br>
+CITI (NOMINEES) LIMITED-ASIAN DEVELOPMENT BANK<br>
+INTERNATIONAL FINANCE CORPORATION<br>
+นาย วีรเวท ไชยวรรณ<br>
+บริษัท วี เอ็น บี โฮลดิ้ง จำกัด .<br>
+PNL CLIENT CUSTODY ASSET ACCOUNT<br>
+บริษัท จอมบึง จำกัด<br>
+N.C.B.TRUST LIMITED-NORGES BANK 30"
+kbank,293796.62,"บริษัท ไทยเอ็นวีดีอาร์ จำกัด<br>
+STATE STREET EUROPE LIMITED<br>
+SOUTH EAST ASIA UK (TYPE C) NOMINEES LIMITED<br>
+THE BANK OF NEW YORK MELLON<br>
+สำนักงานประกันสังคม<br>
+STATE STREET BANK AND TRUST COMPANY<br>
+SOUTH EAST ASIA UK (TYPE A) NOMINEES LIMITED<br>
+สหกรณ์ออมทรัพย์การไฟฟ้าฝ่ายผลิตแห่งประเทศไทย จำกัด<br>
+SE ASIA (TYPE B) NOMINEES LLC<br>
+BNY MELLON NOMINEES LIMITED<br>
+HSBC BANK PLC - SAUDI CENTRAL BANK SECURITIES ACCOUNT A<br>
+HSBC BANK PLC-PRUDENTIAL ASSURANCE COMPANY LIMITED<br>
+THE BANK OF NEW YORK (NOMINEES) LIMITED<br>
+บริษัท กัลฟ์ เอ็นเนอร์จี ดีเวลลอปเมนท์ จำกัด (มหาชน)<br>
+BNY MELLON NOMINEES LIMITED<br>
+GERLACH & CO.-ORBIS SICAV EMERGING MARKETS EQUITY FUND<br>
+HSBC BANK PLC FIRST SENTIER INVESTORS GLOBAL UMBRELLA FUND PLC - FSSA ASIAN EQUITY PLUS FUND<br>
+THE BANK OF NEW YORK (NOMINEES) LIMITED<br>
+NORTRUST NOMINEES LIMITED-NTC-NT0 SEC LENDING THAILAND CLIENTS ACCOUNT<br>
+กองทุนรวม วายุภักษ์หนึ่ง"
+kkp,43396.47,"บริษัท โชติธนวัฒน์ จำกัด<br>
+บริษัท ไทยเอ็นวีดีอาร์ จำกัด<br>
+บริษัท น้ำตาลตะวันออก จำกัด<br>
+น.ส. ฐิตินันท์ วัธนเวคิน<br>
+บริษัท โรงพยาบาลรามคำแหง จำกัด (มหาชน)<br>
+SOUTH EAST ASIA UK (TYPE C) NOMINEES LIMITED<br>
+นาง พนิดา เทพกาญจนา<br>
+บริษัท วายพี อินเตอร์ จำกัด<br>
+นาย สุพล วัธนเวคิน<br>
+STATE STREET EUROPE LIMITED<br>
+นาง วรรณสมร วรรณเมธี<br>
+บริษัท ทิพยประกันภัย จำกัด (มหาชน)<br>
+นาย เอื้อชาติ กาญจนพิทักษ์<br>
+SOUTH EAST ASIA UK (TYPE A) NOMINEES LIMITED<br>
+NORTRUST NOMINEES LIMITED-NTC-CLIENTS ACCOUNT<br>
+นาง สุภาพร จันทร์เสรีวิทยา<br>
+นาง จรรย์สมร วัธนเวคิน<br>
+BNY MELLON NOMINEES LIMITED<br>
+NORTRUST NOMINEES LIMITED-NTC-RE IEDU UCITS 10 PCT CLIENTS ACCOUNT<br>
+บริษัท เอ็ม บี เค จำกัด (มหาชน)"
+ktb,223616.98,"กองทุน เพื่อการฟื้นฟูและพัฒนาระบบสถาบันการเงิน<br>
+บริษัท ไทยเอ็นวีดีอาร์ จำกัด<br>
+STATE STREET EUROPE LIMITED<br>
+สหกรณ์ออมทรัพย์การไฟฟ้าฝ่ายผลิตแห่งประเทศไทย จำกัด<br>
+กองทุนรวม วายุภักษ์หนึ่ง โดย บลจ.เอ็มเอฟซี จำกัด (มหาชน)<br>
+กองทุนรวม วายุภักษ์หนึ่ง โดย บลจ.กรุงไทย จำกัด (มหาชน)<br>
+SOUTH EAST ASIA UK (TYPE C) NOMINEES LIMITED<br>
+ธนาคาร ออมสิน<br>
+SOUTH EAST ASIA UK (TYPE A) NOMINEES LIMITED<br>
+BNY MELLON NOMINEES LIMITED"<br>
+lhfg,20759.99,"CTBC Bank Company Limited<br>
+บริษัท แลนด์ แอนด์ เฮ้าส์ จำกัด (มหาชน)<br>
+บริษัท ควอลิตี้ เฮ้าส์ จำกัด (มหาชน)<br>
+นาย สำเริง มนูญผล<br>
+นาย วิโรจน์ อึ้งไพบูลย์<br>
+นาย อนุพงษ์ อัศวโภคิน<br>
+น.ส. อารียา สุดใจ<br>
+นาง พรรณทิพย์ เตชะไพบูลย์<br>
+บริษัท ไทย เอเวชั่น เซอร์วิส จำกัด<br>
+นาย พลวัต อินทรวิทยนันท์"
+scb,346812.05,"พระบาทสมเด็จพระวชิรเกล้าเจ้าอยู่หัว<br>
+กองทุนรวม วายุภักษ์หนึ่ง<br>
+บริษัท ไทยเอ็นวีดีอาร์ จำกัด<br>
+SOUTH EAST ASIA UK (TYPE C) NOMINEES LIMITED<br>
+STATE STREET EUROPE LIMITED<br>
+กองทุนรวม วายุภักษ์หนึ่ง โดย บลจ.เอ็มเอฟซี จำกัด (มหาชน)<br>
+กองทุนรวม วายุภักษ์หนึ่ง โดย บลจ.กรุงไทย จำกัด (มหาชน)<br>
+สำนักงานประกันสังคม<br>
+THE BANK OF NEW YORK MELLON<br>
+BNY MELLON NOMINEES LIMITED<br>
+STATE STREET BANK AND TRUST COMPANY<br>
+SE ASIA (TYPE B) NOMINEES LLC<br>
+SOUTH EAST ASIA UK (TYPE A) NOMINEES LIMITED"
+tcap,51119.44,"บริษัท เอ็ม บี เค จำกัด (มหาชน)<br>
+บริษัท ไทยเอ็นวีดีอาร์ จำกัด<br>
+SOUTH EAST ASIA UK (TYPE C) NOMINEES LIMITED<br>
+STATE STREET EUROPE LIMITED<br>
+นาย สมชาย ลิ้มถิรคุณ<br>
+DBS BANK LTD. AC DBS NOMINEES-PB CLIENTS<br>
+BBHISL NOMINEES LIMITED<br>
+N.C.B.TRUST LIMITED-NORGES BANK 5<br>
+น.ส. อตินุช ตันติวิท<br>
+นาย อติพงษ์ ตันติวิท<br>
+นาย นิเวศน์ เหมวชิรวรากร<br>
+นาง สมหมาย ลิ้มถิรคุณ<br>
+NORTRUST NOMINEES LIMITED-NTC-CLIENTS ACCOUNT<br>
+นาย อติพล ตันติวิท<br>
+BNY MELLON NOMINEES LIMITED<br>
+นาย สุรชัย รติทอง<br>
+สหกรณ์ออมทรัพย์ พนักงานธนชาต จำกัด<br>
+นาง เพาพิลาส เหมวชิรวรากร<br>
+น.ส. พิสชา เหมวชิรวรากร<br>
+นาย หัสฎางค์ บุญยัง<br>
+กองทุนเปิด กรุงศรีหุ้นระยะยาวปันผล LTF<br>
+นาง สมทรง ลาภานันต์รัตน์<br>
+SE ASIA (TYPE B) NOMINEES LLC<br>
+บริษัท เคี่ยนหงวน (ประเทศไทย) จำกัด (มหาชน)<br>
+CLEARSTREAM NOMINEES LIMITED"
+tisco,79464.08,"CDIB & PARTNERS INVESTMENT HOLDING PTE.LTD.<br>
+บริษัท ไทยเอ็นวีดีอาร์ จำกัด<br>
+SOUTH EAST ASIA UK (TYPE C) NOMINEES LIMITED<br>
+TOKYO CENTURY CORPORATION<br>
+STATE STREET BANK AND TRUST COMPANY<br>
+STATE STREET EUROPE LIMITED<br>
+SOUTH EAST ASIA UK (TYPE A) NOMINEES LIMITED<br>
+CITI (NOMINEES) LIMITED-CITIBANK LONDON RE FUND 208<br>
+นาย วีรวัฒน์ วลัยเสถียร<br>
+สำนักงานประกันสังคม<br>
+BBHISL NOMINEES LIMITED<br>
+บริษัท ทุนธนชาต จำกัด (มหาชน)<br>
+นาง ดวงใจ วลัยเสถียร<br>
+BBHISL NOMINEES LIMITED<br>
+SE ASIA (TYPE B) NOMINEES LLC<br>
+บริษัท วิริยะประกันภัย จำกัด (มหาชน)<br>
+NORTRUST NOMINEES LIMITED-NTC-PUBLIC SECTOR PENSION INVESTMENT BOARD<br>
+นาย ไชยวัฒน์ ศิวสิริการุณย์"
+ttb,173188.2,"บริษัท ทุนธนชาต จำกัด (มหาชน)<br>
+ING BANK N.V.<br>
+กระทรวงการคลัง<br>
+กองทุนรวม วายุภักษ์หนึ่ง<br>
+บริษัท ไทยเอ็นวีดีอาร์ จำกัด<br>
+กองทุนรวม วายุภักษ์หนึ่ง โดย บลจ.กรุงไทย จำกัด (มหาชน)<br>
+กองทุนรวม วายุภักษ์หนึ่ง โดย บลจ.เอ็มเอฟซี จำกัด (มหาชน)<br>
+SOUTH EAST ASIA UK (TYPE C) NOMINEES LIMITED<br>
+STATE STREET EUROPE LIMITED<br>
+MR. HENDRIK ROBERTUS CASTENDIJK<br>
+กองทัพบก<br>
+บริษัท ธนชาต เอสพีวี 1 จำกัด"
