@@ -1,7 +1,7 @@
 <script>
   import * as d3 from "d3";
-  let width = 800;
-  let height = 600;
+  export let width = 800;
+  export let height = 600;
 
   const geojsonPath =
     "https://raw.githubusercontent.com/tarn4study/visualization/master/src/data/thailandWithName.json";
@@ -52,7 +52,8 @@
   // 125 150 400 300 scale 1.5
 </script>
 
-<div>
+<div><h3>อัตราส่วนสินเชื่อต่อเงินฝาก</h3></div>
+<div id="ldr-container">
   <svg id="ldr-f-map" {width} {height}>
     {#each provinces as { path, properties }}
       <path
@@ -77,11 +78,9 @@
       <g class="legendLabels" font-family="sans-serif" font-size="10">
         <svg>
           <g transform="translate(10,0)">
-            {#each d3.scaleLinear().domain([0, 200]).ticks(2) as tick}
-              <text x={tick} y="30" dx=".3em" text-anchor="end">
-                {tick}
-              </text>
-            {/each}
+            <text x="0" y="30" dx=".3em" text-anchor="end"> 0 </text>
+            <text x="105" y="30" dx=".3em" text-anchor="end"> 100 </text>
+            <text x="200" y="30" dx=".3em" text-anchor="end"> 200 </text>
           </g>
         </svg>
       </g>
@@ -98,13 +97,8 @@
     stroke: black;
     stroke-width: 0.5px;
   }
-  #ldr-f-map {
-    z-index: 0;
-    position: relative;
-  }
-  #legend-container {
-    z-index: 1;
-    position: relative;
-    background-color: white;
+  #ldr-container {
+    display: flex;
+    flex-direction: column;
   }
 </style>
