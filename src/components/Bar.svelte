@@ -16,9 +16,7 @@
     defer
     src="https://datawrapper.dwcdn.net/2Ucxe/embed.js?v=9"
     charset="utf-8"
-  ></script><noscript
-    ><img src="https://datawrapper.dwcdn.net/2Ucxe/full.png" alt="" /></noscript
-  >
+  ></script><noscript><img src="/bar.png" alt="" /></noscript>
 </div>
 
 {#if chartData}
