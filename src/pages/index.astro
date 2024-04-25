@@ -19,11 +19,6 @@ const greeting = "Hi, welcome to visualization";
     <div class="nextstep">
       <section>
         <div><Bank /></div>
-        <h2 class="word">การกู้ ในอีกแง่หนึ่งคือการเข้าถึงแหล่งเงินทุน</h2>
-        <h3 class="word">
-          ถ้าเศรษฐกิจทุกจังหวัดดีเหมือนกัน
-          อัตราส่วนการฝากและการกู้ในแต่ละจังหวัดควรจะใกล้ ๆ กัน
-        </h3>
       </section>
       <section>
         <h1>ใกล้กัน?</h1>
@@ -42,6 +37,12 @@ const greeting = "Hi, welcome to visualization";
           <h2>แต่อัตราส่วนเงินกู้ต่อเงินฝากของกรุงเทพ เพิ่มมาเป็น %</h2>
         </div>
         <div><Bar client:only="svelte" /></div>
+        <div>
+          <h2 id="sme">
+            พอต่างจังหวัดไม่ค่อยเข้าถึงแหล่งเงินทุน<br />ก็ทำให้ SME
+            ในต่างจังหวัดน้อยลง<br />ไม่เกิดการจ้างงาน
+          </h2>
+        </div>
         <div
           class="tenor-gif-embed"
           data-postid="17552382"
@@ -91,6 +92,7 @@ const greeting = "Hi, welcome to visualization";
   }
   section:nth-child(2) {
     background-color: blue;
+    height: 100vh;
   }
   h1:first-child {
     color: white;
@@ -107,6 +109,11 @@ const greeting = "Hi, welcome to visualization";
   }
   .nextstep {
     display: none;
+  }
+  #sme {
+    text-align: center;
+    margin-bottom: 4vh;
+    margin-top: 4vh;
   }
 </style>
 <script is:inline src="https://code.jquery.com/jquery-3.7.0.min.js"></script>

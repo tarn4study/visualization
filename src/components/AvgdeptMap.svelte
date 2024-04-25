@@ -46,7 +46,7 @@
   let colorScale = d3
     .scaleLinear()
     .domain([100, 200])
-    .range([d3.rgb(251, 215, 43), d3.rgb(249, 72, 74)]);
+    .range([d3.interpolateRdBu(0.5), d3.interpolateRdBu(1)]);
 
   $: console.log(`color: ${d3.interpolateRdBu(0)}`);
 
@@ -69,7 +69,7 @@
     {#each provinces as { path, properties }}
       <path
         d={path}
-        fill={ldrDictLoan[properties.name] > ldrDictDep[properties.name] &&
+        fill={ldrDictLoan[properties.name] - ldrDictDep[properties.name] > 0 &&
         ldrDictDep[properties.name] > 236728.9
           ? colorScale(ldrDict[properties.name])
           : d3.rgb(192, 192, 192)}
@@ -89,8 +89,8 @@
         />
       </g>
       <linearGradient id="linearGradient-HighLoanMap">
-        <stop offset="0%" stop-color={d3.rgb(251, 215, 43)} />
-        <stop offset="100%" stop-color={d3.rgb(249, 72, 74)} />
+        <stop offset="0%" stop-color={d3.interpolateRdBu(0.5)} />
+        <stop offset="100%" stop-color={d3.interpolateRdBu(1)} />
       </linearGradient>
       <g class="legendLabels" font-family="sans-serif" font-size="10">
         <svg>

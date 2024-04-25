@@ -69,7 +69,7 @@
     {#each provinces as { path, properties }}
       <path
         d={path}
-        fill={ldrDictLoan[properties.name] > ldrDictDep[properties.name]
+        fill={ldrDictLoan[properties.name] - ldrDictDep[properties.name] > 0
           ? colorScale(ldrDict[properties.name])
           : d3.rgb(192, 192, 192)}
         class:active={name === properties.name}
