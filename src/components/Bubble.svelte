@@ -68,7 +68,33 @@
       .attr("fill", backgroundCircle.fill)
       .attr("opacity", backgroundCircle.opacity);
 
-    const colorScale = d3.scaleOrdinal(d3.schemeCategory10);
+    function colorScale(bankname) {
+      if (bankname === "bay") {
+        return d3.rgb(255, 196, 38);
+      } else if (bankname === "bbl") {
+        return d3.rgb(34, 62, 153);
+      } else if (bankname === "cimbt") {
+        return d3.rgb(255, 20, 26);
+      } else if (bankname === "credit") {
+        return d3.rgb(0, 70, 182);
+      } else if (bankname === "kbank") {
+        return d3.rgb(14, 143, 51);
+      } else if (bankname === "kkp") {
+        return d3.rgb(85, 79, 124);
+      } else if (bankname === "ktb") {
+        return d3.rgb(7, 165, 232);
+      } else if (bankname === "lhfg") {
+        return d3.rgb(192, 180, 0);
+      } else if (bankname === "scb") {
+        return d3.rgb(78, 42, 129);
+      } else if (bankname === "tcap") {
+        return d3.rgb(244, 113, 35);
+      } else if (bankname === "tisco") {
+        return d3.rgb(1, 93, 168);
+      } else if (bankname === "ttb") {
+        return d3.rgb(16, 87, 237);
+      }
+    }
     const tooltip = document.getElementById("tooltip");
     const circles = svg
       .append("g")
