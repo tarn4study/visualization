@@ -1,5 +1,6 @@
 <script>
   import * as d3 from "d3";
+
   export let width = 800;
   export let height = 600;
 
@@ -7,22 +8,36 @@
     "https://raw.githubusercontent.com/tarn4study/visualization/master/src/data/thailandWithName.json";
 
   const ldrPath =
+    "https://raw.githubusercontent.com/tarn4study/visualization/master/src/data/ldr-money.csv";
+
+  const path =
     "https://raw.githubusercontent.com/tarn4study/visualization/master/src/data/LDR.csv";
 
   let geojson;
   d3.json(geojsonPath).then((data) => (geojson = data));
 
   let ldrdata;
+  let ldrratiodata;
   const ldrDict = {};
+  d3.csv(path).then((data) => {
+    ldrratiodata = data;
+
+    ldrratiodata.forEach((dataPoint) => {
+      ldrDict[dataPoint.province] = dataPoint.LDR;
+    });
+  });
+  const ldrDictLoan = {};
+  const ldrDictDep = {};
   d3.csv(ldrPath).then((data) => {
     ldrdata = data;
 
     ldrdata.forEach((dataPoint) => {
-      ldrDict[dataPoint.province] = dataPoint.LDR;
+      ldrDictLoan[dataPoint.province] = dataPoint.loan;
+      ldrDictDep[dataPoint.province] = dataPoint.deposit;
     });
   });
 
-  $: console.log(ldrdata);
+  $: console.log(`ldrDict ${ldrDictLoan["Bangkok"]}`);
 
   $: projection = d3.geoMercator().fitSize([width, height], geojson);
 
@@ -30,12 +45,8 @@
 
   let colorScale = d3
     .scaleLinear()
-    .domain([0, 100, 200])
-    .range([
-      d3.interpolateRdBu(0),
-      d3.interpolateRdBu(0.5),
-      d3.interpolateRdBu(1),
-    ]);
+    .domain([100, 200])
+    .range([d3.rgb(251, 215, 43), d3.rgb(249, 72, 74)]);
 
   $: console.log(`color: ${d3.interpolateRdBu(0)}`);
 
@@ -58,7 +69,9 @@
     {#each provinces as { path, properties }}
       <path
         d={path}
-        fill={colorScale(ldrDict[properties.name])}
+        fill={ldrDictLoan[properties.name] > ldrDictDep[properties.name]
+          ? colorScale(ldrDict[properties.name])
+          : d3.rgb(211, 211, 211)}
         class:active={name === properties.name}
         on:mouseenter={() => (name = properties.name)}
         role="presentation"
@@ -68,19 +81,33 @@
   <svg id="legend-container">
     <g class="legend" transform={`translate(0, 0)`}>
       <g transform="translate(10,0)">
-        <rect width="200" height="18" style="fill: url(#linearGradient)" />
+        <rect
+          width="200"
+          height="18"
+          style="fill: url(#linearGradient-HighLoanMap)"
+        />
       </g>
-      <linearGradient id="linearGradient">
-        <stop offset="0%" stop-color={d3.interpolateRdBu(0)} />
-        <stop offset="50%" stop-color={d3.interpolateRdBu(0.5)} />
-        <stop offset="100%" stop-color={d3.interpolateRdBu(1)} />
+      <linearGradient id="linearGradient-HighLoanMap">
+        <stop offset="0%" stop-color={d3.rgb(251, 215, 43)} />
+        <stop offset="100%" stop-color={d3.rgb(249, 72, 74)} />
       </linearGradient>
       <g class="legendLabels" font-family="sans-serif" font-size="10">
         <svg>
           <g transform="translate(10,0)">
-            <text x="0" y="30" dx=".3em" text-anchor="end"> 0 </text>
-            <text x="105" y="30" dx=".3em" text-anchor="end"> 100 </text>
+            <text x="10" y="30" dx=".3em" text-anchor="end"> 100 </text>
             <text x="200" y="30" dx=".3em" text-anchor="end"> 200 </text>
+          </g>
+        </svg>
+      </g>
+      <g transform="translate(10,40)">
+        <rect width="18" height="18" style="fill: rgb(211, 211, 211)" />
+      </g>
+      <g class="legendLabels" font-family="sans-serif" font-size="10">
+        <svg>
+          <g transform="translate(130,25)">
+            <text x="10" y="30" dx=".3em" text-anchor="end">
+              deoposit more than loan
+            </text>
           </g>
         </svg>
       </g>

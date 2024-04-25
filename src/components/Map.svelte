@@ -49,48 +49,60 @@
     });
   $: console.log(provinces);
   let name = null;
-  // 125 150 400 300 scale 1.5
+  // 225 200 200 200 scale 1.5
 </script>
 
-<div>
-  <svg id="ldr" {width} {height} viewBox="225 200 200 200">
-    {#each provinces as { path, properties }}
-      <path
-        d={path}
-        fill={colorScale(ldrDict[properties.name])}
-        class:active={name === properties.name}
-        on:mouseenter={() => (name = properties.name)}
-        role="presentation"
-      />
-    {/each}
-  </svg>
-  <svg id="legend-container">
-    <g class="legend" transform={`translate(0, 0)`}>
-      <g transform="translate(10,0)">
-        <rect width="200" height="18" style="fill: url(#linearGradient)" />
+<div id="zoom-container">
+  <h2 class="word">การกู้ ในอีกแง่หนึ่งคือการเข้าถึงแหล่งเงินทุน</h2>
+  <h3 class="word">
+    ถ้าเศรษฐกิจทุกจังหวัดดีเหมือนกัน
+    อัตราส่วนการฝากและการกู้ในแต่ละจังหวัดควรจะใกล้ ๆ กัน
+  </h3>
+
+  <div>
+    <svg id="ldr" {width} {height} viewBox="300 200 50 200">
+      {#each provinces as { path, properties }}
+        <path
+          d={path}
+          fill={colorScale(ldrDict[properties.name])}
+          class:active={name === properties.name}
+          on:mouseenter={() => (name = properties.name)}
+          role="presentation"
+        />
+      {/each}
+    </svg>
+    <svg id="legend-container">
+      <g class="legend" transform={`translate(0, 0)`}>
+        <g transform="translate(10,0)">
+          <rect width="200" height="18" style="fill: url(#linearGradient)" />
+        </g>
+        <linearGradient id="linearGradient">
+          <stop offset="0%" stop-color={d3.interpolateRdBu(0)} />
+          <stop offset="50%" stop-color={d3.interpolateRdBu(0.5)} />
+          <stop offset="100%" stop-color={d3.interpolateRdBu(1)} />
+        </linearGradient>
+        <g class="legendLabels" font-family="sans-serif" font-size="10">
+          <svg>
+            <g transform="translate(10,0)">
+              {#each d3.scaleLinear().domain([0, 200]).ticks(2) as tick}
+                <text x={tick} y="30" dx=".3em" text-anchor="end">
+                  {tick}
+                </text>
+              {/each}
+            </g>
+          </svg>
+        </g>
       </g>
-      <linearGradient id="linearGradient">
-        <stop offset="0%" stop-color={d3.interpolateRdBu(0)} />
-        <stop offset="50%" stop-color={d3.interpolateRdBu(0.5)} />
-        <stop offset="100%" stop-color={d3.interpolateRdBu(1)} />
-      </linearGradient>
-      <g class="legendLabels" font-family="sans-serif" font-size="10">
-        <svg>
-          <g transform="translate(10,0)">
-            {#each d3.scaleLinear().domain([0, 200]).ticks(2) as tick}
-              <text x={tick} y="30" dx=".3em" text-anchor="end">
-                {tick}
-              </text>
-            {/each}
-          </g>
-        </svg>
-      </g>
-    </g>
-  </svg>
-  <p>เห็นความเหลื่อมล้ำไหม??</p>
+    </svg>
+  </div>
 </div>
 
 <style>
+  #zoom-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
   path {
     stroke: none;
     opacity: 1;
@@ -100,13 +112,12 @@
     stroke-width: 0.5px;
   }
   #ldr {
-    transform: scale(1.5);
-    z-index: 0;
-    position: relative;
+    transform: scale(1);
   }
   #legend-container {
-    z-index: 1;
-    position: relative;
     background-color: white;
+  }
+  .word {
+    text-align: center;
   }
 </style>

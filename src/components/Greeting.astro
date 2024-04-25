@@ -19,9 +19,9 @@
   });
 </script>
 
-<div><h2>ไงคุณเจ้าของธุรกิจ อยากกู้เงินไปขยายธุรกิจไหม</h2></div>
+<div class = main_header><h2>ไงคุณเจ้าของธุรกิจ อยากกู้เงินไปขยายธุรกิจไหม</h2></div>
 <div class="button-container">
-  <button id="yes1">อยาก</button><button id="yes2">อยากเหมือนกันแต่สีแดง</button
+  <button id="yes1">อยาก</button><button id="yes2">อยาก อยาก อยาก อยาก อยาก</button
   >
 </div>
 
@@ -38,18 +38,51 @@
     flex-direction: row;
     justify-content: center;
   }
-  button {
-    margin: 5vh;
-    width: 50vh;
-    height: 7vh;
+
+  .main_header {
+  text-align: center;
+  margin-bottom: 20px;
+  } 
+
+  .main_header h2 {
+  font-size: 2.4rem; 
+  font-weight: bold;
+  color: #ffffff; 
+  text-shadow: 5px 1px 2px rgba(0, 0, 2, 0.2); /* Add a subtle shadow */
   }
+  .button-container button {
+  margin: 5vh;
+  width: 70vh;
+  height: 25vh;
+  margin-right: 40px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* For screens wider than 768px, use a larger font size */
+@media (min-width: 768px) {
+  .button-container button {
+    font-size: 2.2rem;
+  }
+}
+
+
+  .button-container button:hover {
+  background-color: #f0f0f0; /* Change background color on hover */
+  }
+
   button.selected {
     font-weight: bold;
   }
-  button:nth-child(1) {
-    background-color: aqua;
+  .button-container button:nth-child(1) {
+  background-color: aqua;
   }
-  button:nth-child(2) {
-    background-color: red;
+
+  .button-container button:nth-child(2) {
+  background-color: coral;
   }
+
 </style>
