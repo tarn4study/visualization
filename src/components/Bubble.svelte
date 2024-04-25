@@ -162,7 +162,9 @@
 <div id="bubble-container">
   <div id="chart"></div>
   <div id="paragraph-container">
-    <p>แค่ธนาคาร 5 อันดับแรกก็คิดเป็น 75.8% ของ Market Cap แล้ว!</p>
+    <p style="font-size: 2.5em; font-family: 'Chonburi'">
+      แค่ธนาคาร 5 อันดับแรกก็คิดเป็น<br /> 75.8% ของ Market Cap แล้ว!
+    </p>
   </div>
 </div>
 

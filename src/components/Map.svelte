@@ -65,10 +65,10 @@
     {/each}
     <g transform="translate(636,296)"><text font-size="10">ใกล้กัน?</text></g>
     <g transform="translate(636,300)"
-      ><text font-size="3">สีแดง = ฝากมากกว่ากู้</text></g
+      ><text font-size="2.5">สีแดง = เงินฝากมากกว่ากู้</text></g
     >
     <g transform="translate(636,304)"
-      ><text font-size="3">สีน้ำเงิน = กู้มากกว่าฝาก</text></g
+      ><text font-size="2.5">สีน้ำเงิน = เงินกู้มากกว่าฝาก</text></g
     >
     <g class="legend" transform={`translate(665, 325)`}>
       <g transform="translate(10,0)">

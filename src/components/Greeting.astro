@@ -1,6 +1,7 @@
 ---
 
 ---
+
 <script>
   const button1 = document.getElementById("yes1");
   const button2 = document.getElementById("yes2");
@@ -9,15 +10,14 @@
   const button5 = document.getElementById("thai");
   const text = document.getElementById("text");
 
-  
-  button1.addEventListener("click", function() {
+  button1.addEventListener("click", function () {
     button1.style.backgroundColor = "#009bff";
     button1.classList.add("selected");
     $(".step2").css("display", "unset");
     $(".step1").css("display", "none");
   });
 
-  button2.addEventListener("click", function() {
+  button2.addEventListener("click", function () {
     button1.classList.add("selected");
     $(".step2").css("display", "unset");
     $(".step1").css("display", "none");
@@ -29,7 +29,8 @@
     $(".step2").css("display", "none");
     $(".nextstep").css("display", "unset");
     text.textContent =
-      "สวัสดีคนกรุงเทพเราให้คุณกู้ได้ 128% ของเงินฝากละกัน ในขณะที่คนอุทัยธานีมีให้กู้ประมาณ 32% ของเงินฝาก" + " และคนไทยเฉลี่ยทั้งประเทศกู้ได้ประมาณ 107% ของเงินฝาก";
+      "สวัสดีคนกรุงเทพเราให้คุณกู้ได้ 128% ของเงินฝากละกัน ในขณะที่คนอุทัยธานีมีให้กู้ประมาณ 32% ของเงินฝาก" +
+      " และคนไทยเฉลี่ยทั้งประเทศกู้ได้ประมาณ 107% ของเงินฝาก";
   });
 
   button4.addEventListener("click", function () {
@@ -50,42 +51,52 @@
       "สวัสดีคนไทย เราให้คุณกู้ได้ 107% ของเงินฝากนะ เสียดาย ถ้าคุณเป็นคนกรุงเทพ คุณจะกู้ได้ถึง 128% ของเงินฝาก แต่ถ้าคุณเป็นคนอุทัยธานี คุณจะกู้ได้ประมาณ 32% ของเงินฝาก";
   });
 
-  button6.addEventListener("click", function() {
+  button6.addEventListener("click", function () {
     button6.classList.add("selected");
     $(".nextstep").css("display", "unset");
     document.querySelector(".nextstep").scrollIntoView({ behavior: "smooth" });
-  }); 
+  });
 
   $(window).scroll(() => {
-  if ($(document).scrollTop() < 60) {
-    $('p#text').css('top', $(document).scrollTop() * -1)
-  }
-})
+    if ($(document).scrollTop() < 60) {
+      $("p#text").css("top", $(document).scrollTop() * -1);
+    }
+  });
+</script>
 
-  </script>
-
-<div class = step1>
-  <div class = main_header><h2>ไงคุณเจ้าของธุรกิจ อยากกู้เงินไปขยายธุรกิจไหม 🤑🤑🤑</h2></div>
-    <div class="button-container">
-      <button id="yes1", class = yes1>อยาก</button><button id="yes2", class = yes2>อยากเหมือนกันแต่สีแดง</button>
-    </div>
+<div class="step1">
+  <div class="main_header" style="width: 100vw; color: white;">
+    <h2>ไงคุณเจ้าของธุรกิจ อยากกู้เงินไปขยายธุรกิจไหม 🤑🤑🤑</h2>
+  </div>
+  <div class="button-container">
+    <button id="yes1" , class="yes1">อยาก</button><button
+      id="yes2"
+      ,
+      class="yes2">อยากเหมือนกันแต่สีแดง</button
+    >
+  </div>
 </div>
-<div class = step2>
+<div class="step2">
   <section>
-    <div class = main_header><h2>อยู่ที่ไหนอะ บอกหน่อย เดี๋ยวบอกเองว่าให้กู้ได้เท่าไหร่</h2></div>
+    <div class="main_header">
+      <h2>อยู่ที่ไหนอะ บอกหน่อย เดี๋ยวบอกเองว่าให้กู้ได้เท่าไหร่</h2>
+    </div>
     <div class="button-container">
-      <button id="bangkok", class = bangkok>กรุงเทพมหานคร</button>
-      <button id="uthai", class = uthai>อุทัยธานี</button>
-      <button id="thai", class = thai>ประเทศไทย</button>
+      <button id="bangkok" , class="bangkok">กรุงเทพมหานคร</button>
+      <button id="uthai" , class="uthai">อุทัยธานี</button>
+      <button id="thai" , class="thai">ประเทศไทย</button>
     </div>
   </section>
 </div>
 
-<div class = "step3">
-  <section class = blue>
+<div class="step3">
+  <section class="blue">
     <div><p id="text"></p></div>
-      <p id="inequality"><br><br><br><br><br><br><br><br><br>เห็นความเหลื่อมล้ำไหม??</p>
-      <p>↓</p>
+    <p id="inequality">
+      <br /><br /><br /><br /><br /><br /><br /><br /><br
+      />เห็นความเหลื่อมล้ำไหม??
+    </p>
+    <p>↓</p>
   </section>
 </div>
 
@@ -104,60 +115,60 @@
   }
 
   .main_header {
-  text-align: center;
-  margin-bottom: 20px;
-  } 
+    text-align: center;
+    margin-bottom: 20px;
+  }
 
   .main_header h2 {
-  font-size: 2.4rem; 
-  font-weight: bold;
-  font-weight: normal;
-  color: #ffffff; 
-  text-shadow: 5px 1px 2px rgba(0, 0, 2, 0.2); /* Add a subtle shadow */
+    font-size: 2.4rem;
+    font-weight: bold;
+    font-weight: normal;
+    color: #ffffff;
+    text-shadow: 5px 1px 2px rgba(0, 0, 2, 0.2); /* Add a subtle shadow */
   }
 
   #text {
-  text-align: center;
-  margin-bottom: 20px;
-  font-size: 2.4rem; 
-  font-weight: bold;
-  color: #ffffff; 
-  text-shadow: 0px 1px 2px rgba(0, 0, 2, 0.2); /* Add a subtle shadow */
-}
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2.4rem;
+    font-weight: bold;
+    color: #ffffff;
+    text-shadow: 0px 1px 2px rgba(0, 0, 2, 0.2); /* Add a subtle shadow */
+  }
 
   .button-container button {
-  margin: 10vh;
-  width: 41vh;
-  height: 17vh;
-  margin-right: 40px;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 20px;
-  cursor: pointer;
-}
-
-/* For screens wider than 768px, use a larger font size */
-@media (min-width: 768px) {
-  .button-container button {
-    font-size: 1.4rem;
-  }
-}
- .yes1 {
-    background-color: #21C39D;
+    margin: 10vh;
+    width: 41vh;
+    height: 17vh;
+    margin-right: 40px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
   }
 
- .yes2 {
-    background-color: #F56767;
+  /* For screens wider than 768px, use a larger font size */
+  @media (min-width: 768px) {
+    .button-container button {
+      font-size: 1.4rem;
+    }
+  }
+  .yes1 {
+    background-color: #21c39d;
   }
 
- .bangkok {
+  .yes2 {
+    background-color: #f56767;
+  }
+
+  .bangkok {
     background-color: rgb(200, 200, 200);
   }
-  .uthai{
-    background-color:  rgb(200, 200, 200);
+  .uthai {
+    background-color: rgb(200, 200, 200);
   }
-  .thai{
-    background-color:  rgb(200, 200, 200);
+  .thai {
+    background-color: rgb(200, 200, 200);
   }
 
   button.selected {
@@ -166,43 +177,42 @@
   }
 
   .button-container button:hover {
-  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
-}
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+  }
 
-p#text {
-  position: absolute;
-  font-weight: normal;
-  font-size: 2vw; 
-  width: 70%;  
-  top: 25%;
-  right:15%; 
-  white-space: pre-wrap;
-}
-
+  p#text {
+    position: absolute;
+    font-weight: normal;
+    font-size: 2vw;
+    width: 70%;
+    top: 25%;
+    right: 15%;
+    white-space: pre-wrap;
+  }
 
   p:nth-child(2) {
-    font-size:2.6vw;
+    font-size: 2.6vw;
     margin: 0%;
     padding: 0%;
-    color: blue;
+    color: #106af0;
   }
   p:nth-child(3) {
-    font-size:2.6vw;
+    font-size: 2.6vw;
     margin: 0%;
     padding: 0%;
-    color: blue;
+    color: #106af0;
   }
 
-  .step2{
-    display:none;
+  .step2 {
+    display: none;
   }
 
-  .step3{
-    display:none;
+  .step3 {
+    display: none;
   }
 
   .blue {
-    background: linear-gradient(to bottom, blue 75%, white 25%);
+    background: linear-gradient(to bottom, #106af0 75%, white 25%);
     width: 100vw;
     color: white;
   }

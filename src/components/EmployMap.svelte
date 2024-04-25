@@ -46,7 +46,9 @@
   // 125 150 400 300 scale 1.5
 </script>
 
-<div><h3>จำนวนการจ้างงานใน SME</h3></div>
+<div style="display: flex; justify-content: center;">
+  <h3>จำนวนการจ้างงานใน SME</h3>
+</div>
 <div id="employ-container">
   <svg id="employ" {width} {height}>
     {#each provinces as { path, properties }}

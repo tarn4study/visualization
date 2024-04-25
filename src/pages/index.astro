@@ -12,7 +12,9 @@ const greeting = "Hi, welcome to visualization";
 
 <Layout title={greeting}>
   <main>
-    <section>
+    <section
+      style="background: linear-gradient(to bottom, #106af0 60%, white 48%); width: 100vw;"
+    >
       <div><Greeting /></div>
     </section>
 
@@ -20,7 +22,7 @@ const greeting = "Hi, welcome to visualization";
       <section>
         <div><Bank /></div>
       </section>
-      <section>
+      <section style="background-color: #106AF0; height: 100vh;">
         <h1>ใกล้กัน?</h1>
       </section>
       <section>
@@ -29,23 +31,32 @@ const greeting = "Hi, welcome to visualization";
 
       <section>
         <div>
-          <h2>
+          <p style="font-size: 2em">
             ตั้งแต่ปี 2550 ที่ผ่านมา อัตราส่วนสินเชื่อต่อเงินฝาก เพิ่มมาแค่
             14.03%
-          </h2>
+          </p>
         </div>
         <div>
-          <h2>แต่อัตราส่วนเงินกู้ต่อเงินฝากของกรุงเทพ เพิ่มมาเป็น 24.78%</h2>
+          <p style="font-size: 2em">
+            แต่อัตราส่วนเงินกู้ต่อเงินฝากของกรุงเทพ เพิ่มมาถึง 24.78%
+          </p>
         </div>
         <div><Bar client:only="svelte" /></div>
         <div>
-          <h2 id="sme">
+          <p id="sme" style="font-size: 2em">
             พอต่างจังหวัดไม่ค่อยเข้าถึงแหล่งเงินทุน<br />ก็ทำให้ SME
             ในต่างจังหวัดน้อยลง<br />ไม่เกิดการจ้างงาน
-          </h2>
+          </p>
         </div>
         <img src="/mindblow.gif" />
-        <div><h2 id="meme">ไม่จ้างก็เข้ากรุงเทพสิครับพี่น้อง</h2></div>
+        <div>
+          <h2
+            id="meme"
+            style="font-family:'Chonburi'; font-size: 2em; margin-top: 1.5em"
+          >
+            ไม่จ้างงานก็เข้ากรุงเทพสิครับพี่น้อง
+          </h2>
+        </div>
       </section>
       <section>
         <div><EmployMap client:only="svelte" /></div>
@@ -55,14 +66,16 @@ const greeting = "Hi, welcome to visualization";
       </section>
       <section>
         <div>
-          <h2 style="width: 80vw; text-align: center;">
+          <p style="width: 80vw; text-align: center; font-size: 2em">
             แทนที่เงินฝากของคนต่างจังหวัด จะถูกนำมาหมุนเวียนในจังหวัดตัวเอง
             ทำไมเงินของคนจังหวัด สุโขทัย พิจิตร ระนอง หรือ
-            จังหวัดอื่นๆต้องถูกเอาไปให้คนกรุงเทพกู้? สรุปแล้ว เรื่องเงินฝาก
-            ก็เหมือนเรื่องภาษีหรืออีกหลาย ๆ เรื่อง ที่ทรัพยากรต่างจังหวัด
-            ต้องถูกโยกไปให้ส่วนกลางอย่างกรุงเทพ
-            ทำให้เกิดความเหลื่อมล้ำทางการพัฒนา
-          </h2>
+            จังหวัดอื่นๆต้องถูกเอาไปให้คนกรุงเทพกู้? <br /><span
+              style="font-family: 'Chonburi';"
+              >สรุปแล้ว เรื่องเงินฝาก ก็เหมือนเรื่องภาษีหรืออีกหลาย ๆ เรื่อง
+              ที่ทรัพยากรต่างจังหวัด ต้องถูกโยกไปให้ส่วนกลางอย่างกรุงเทพ
+              ทำให้เกิดความเหลื่อมล้ำทางการพัฒนา</span
+            >
+          </p>
         </div>
         <div><DynamicChart client:only="svelte" /></div>
       </section>
@@ -71,11 +84,6 @@ const greeting = "Hi, welcome to visualization";
 </Layout>
 
 <style>
-  section:nth-child(1) {
-    background: linear-gradient(to bottom, blue 52%, white 48%);
-    width: 100vw;
-    color: white;
-  }
   section:nth-child(2) {
     background-color: #106af0;
   }

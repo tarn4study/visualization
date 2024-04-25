@@ -105,9 +105,9 @@
       </g>
       <g class="legendLabels" font-family="sans-serif" font-size="10">
         <svg>
-          <g transform="translate(130,25)">
+          <g transform="translate(140,25)">
             <text x="140" y="30" dx=".3em" text-anchor="end">
-              deoposit more than loan or deposit more than average
+              deoposit more than loan and deposit more than average
             </text>
           </g>
         </svg>
