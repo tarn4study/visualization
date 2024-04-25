@@ -175,4 +175,7 @@
     text-align: center;
     font-size: 3vh;
   }
+  #chart {
+    margin-left: 90px;
+  }
 </style>

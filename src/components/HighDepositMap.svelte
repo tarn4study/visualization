@@ -69,7 +69,7 @@
     {#each provinces as { path, properties }}
       <path
         d={path}
-        fill={ldrDictDep[properties.name] > ldrDictLoan[properties.name]
+        fill={ldrDictDep[properties.name] - ldrDictLoan[properties.name] > 0
           ? colorScale(ldrDict[properties.name])
           : d3.rgb(192, 192, 192)}
         class:active={name === properties.name}
@@ -100,7 +100,7 @@
         </svg>
       </g>
       <g transform="translate(10,40)">
-        <rect width="18" height="18" style="fill: rgb(211, 211, 211)" />
+        <rect width="18" height="18" style="fill: rgb(192, 192, 192)" />
       </g>
       <g class="legendLabels" font-family="sans-serif" font-size="10">
         <svg>
