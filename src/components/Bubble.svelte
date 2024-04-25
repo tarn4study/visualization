@@ -104,8 +104,7 @@
       .append("circle")
       .attr("r", (d) => d.radius)
       .attr("fill", (d) => colorScale(d.bank))
-      .attr("stroke", "black")
-      .attr("stroke-width", 1)
+      .attr("stroke-width", 0)
       .on("mouseover", function (event, d) {
         tooltip.style.display = "block"; // Show tooltip
         tooltip.innerHTML = `<b>Bank:</b> ${d.bank}`; // Update content
