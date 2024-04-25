@@ -95,8 +95,8 @@
       <g class="legendLabels" font-family="sans-serif" font-size="10">
         <svg>
           <g transform="translate(10,0)">
-            <text x="10" y="30" dx=".3em" text-anchor="end"> 5331 </text>
-            <text x="210" y="30" dx=".3em" text-anchor="end"> 13537830 </text>
+            <text x="10" y="30" dx=".3em" text-anchor="end"> 100 </text>
+            <text x="210" y="30" dx=".3em" text-anchor="end"> 200 </text>
           </g>
         </svg>
       </g>
