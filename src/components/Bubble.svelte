@@ -70,29 +70,29 @@
 
     function colorScale(bankname) {
       if (bankname === "bay") {
-        return d3.rgb(255, 196, 38);
+        return d3.color("#ffdc7d").rgb();
       } else if (bankname === "bbl") {
-        return d3.rgb(34, 62, 153);
+        return d3.color("#679ecb").rgb();
       } else if (bankname === "cimbt") {
-        return d3.rgb(255, 20, 26);
+        return d3.color("#ff7276").rgb();
       } else if (bankname === "credit") {
-        return d3.rgb(0, 70, 182);
+        return d3.color("#6690d3").rgb();
       } else if (bankname === "kbank") {
-        return d3.rgb(14, 143, 51);
+        return d3.color("#6ebc85").rgb();
       } else if (bankname === "kkp") {
-        return d3.rgb(85, 79, 124);
+        return d3.color("#9995b0").rgb();
       } else if (bankname === "ktb") {
-        return d3.rgb(7, 165, 232);
+        return d3.color("#6ac9f1").rgb();
       } else if (bankname === "lhfg") {
-        return d3.rgb(192, 180, 0);
+        return d3.color("#d9d266").rgb();
       } else if (bankname === "scb") {
-        return d3.rgb(78, 42, 129);
+        return d3.color("#957fb3").rgb();
       } else if (bankname === "tcap") {
-        return d3.rgb(244, 113, 35);
+        return d3.color("#f8aa7b").rgb();
       } else if (bankname === "tisco") {
-        return d3.rgb(1, 93, 168);
+        return d3.color("#679ecb").rgb();
       } else if (bankname === "ttb") {
-        return d3.rgb(16, 87, 237);
+        return d3.color("#709af4").rgb();
       }
     }
     const tooltip = document.getElementById("tooltip");
@@ -107,7 +107,7 @@
       .attr("stroke-width", 0)
       .on("mouseover", function (event, d) {
         tooltip.style.display = "block"; // Show tooltip
-        tooltip.innerHTML = `<b>Bank:</b> ${d.bank}`; // Update content
+        tooltip.innerHTML = `<b>ผู้ถือหุ้นรายใหญ่:</b> ${d.share}`; // Update content
         const x = event.pageX + 10; // Adjust position based on mouse
         const y = event.pageY + 10;
         tooltip.style.left = `${x}px`;
