@@ -11,6 +11,7 @@
 
   
   button1.addEventListener("click", function() {
+    button1.style.backgroundColor = "#009bff";
     button1.classList.add("selected");
     $(".step2").css("display", "unset");
     $(".step1").css("display", "none");
@@ -28,7 +29,7 @@
     $(".step2").css("display", "none");
     $(".nextstep").css("display", "unset");
     text.textContent =
-      "สวัสดีคนกรุงเทพ เราให้คุณกู้ได้ 128% ของเงินฝากละกัน ในขณะที่คนอุทัยธานีมีให้กู้ประมาณ 32% ของเงินฝาก และคนไทยเฉลี่ยทั้งประเทศกู้ได้ประมาณ 107% ของเงินฝาก";
+      "สวัสดีคนกรุงเทพเราให้คุณกู้ได้ 128% ของเงินฝากละกัน ในขณะที่คนอุทัยธานีมีให้กู้ประมาณ 32% ของเงินฝาก" + " และคนไทยเฉลี่ยทั้งประเทศกู้ได้ประมาณ 107% ของเงินฝาก";
   });
 
   button4.addEventListener("click", function () {
@@ -37,7 +38,7 @@
     $(".step2").css("display", "none");
     $(".nextstep").css("display", "unset");
     text.textContent =
-      "สวัสดีคนอุทัยธานี เราให้คุณกู้ได้แค่ 32% ของเงินฝากนะ เสียดาย ถ้าคุณเป็นคนกรุงเทพ คุณจะกู้ได้ถึง 128% ของเงินฝาก แล้วคนไทยเฉลี่ยทั้งประเทศยังกู้ได้ประมาณ 107% ของเงินฝาก";
+      "สวัสดีคนอุทัยธานี เราให้คุณกู้ได้แค่ 32% ของเงินฝากนะ เสียดาย ถ้าคุณเป็นคนกรุงเทพ คุณจะกู้ได้ถึง 128% ของเงินฝากแล้วคนไทยเฉลี่ยทั้งประเทศยังกู้ได้ประมาณ 107% ของเงินฝาก";
   });
 
   button5.addEventListener("click", function () {
@@ -54,29 +55,37 @@
     $(".nextstep").css("display", "unset");
     document.querySelector(".nextstep").scrollIntoView({ behavior: "smooth" });
   }); 
+
+  $(window).scroll(() => {
+  if ($(document).scrollTop() < 60) {
+    $('p#text').css('top', $(document).scrollTop() * -1)
+  }
+})
+
   </script>
 
 <div class = step1>
-  <div class = main_header><h2>ไงคุณเจ้าของธุรกิจ อยากกู้เงินไปขยายธุรกิจไหม</h2></div>
+  <div class = main_header><h2>ไงคุณเจ้าของธุรกิจ อยากกู้เงินไปขยายธุรกิจไหม 🤑🤑🤑</h2></div>
     <div class="button-container">
-      <button id="yes1">อยาก</button><button id="yes2">อยาก อยาก อยาก อยาก อยาก</button>
+      <button id="yes1", class = yes1>อยาก</button><button id="yes2", class = yes2>อยากเหมือนกันแต่สีแดง</button>
     </div>
 </div>
 <div class = step2>
   <section>
     <div class = main_header><h2>อยู่ที่ไหนอะ บอกหน่อย เดี๋ยวบอกเองว่าให้กู้ได้เท่าไหร่</h2></div>
     <div class="button-container">
-      <button id="bangkok">กรุงเทพมหานคร</button>
-      <button id="uthai">อุทัยธานี</button>
-      <button id="thai">ประเทศไทย</button>
+      <button id="bangkok", class = bangkok>กรุงเทพมหานคร</button>
+      <button id="uthai", class = uthai>อุทัยธานี</button>
+      <button id="thai", class = thai>ประเทศไทย</button>
     </div>
   </section>
 </div>
 
 <div class = "step3">
-  <section>
+  <section class = blue>
     <div><p id="text"></p></div>
-      <p id="inequality">เห็นความเหลื่อมล้ำไหม??</p>
+      <p id="inequality"><br><br><br><br><br><br><br><br><br>เห็นความเหลื่อมล้ำไหม??</p>
+      <p>↓</p>
   </section>
 </div>
 
@@ -102,6 +111,7 @@
   .main_header h2 {
   font-size: 2.4rem; 
   font-weight: bold;
+  font-weight: normal;
   color: #ffffff; 
   text-shadow: 5px 1px 2px rgba(0, 0, 2, 0.2); /* Add a subtle shadow */
   }
@@ -113,7 +123,7 @@
   font-weight: bold;
   color: #ffffff; 
   text-shadow: 0px 1px 2px rgba(0, 0, 2, 0.2); /* Add a subtle shadow */
-  }
+}
 
   .button-container button {
   margin: 10vh;
@@ -132,6 +142,23 @@
     font-size: 1.4rem;
   }
 }
+ .yes1 {
+    background-color: #21C39D;
+  }
+
+ .yes2 {
+    background-color: #F56767;
+  }
+
+ .bangkok {
+    background-color: rgb(200, 200, 200);
+  }
+  .uthai{
+    background-color:  rgb(200, 200, 200);
+  }
+  .thai{
+    background-color:  rgb(200, 200, 200);
+  }
 
   button.selected {
     font-weight: bold;
@@ -139,26 +166,31 @@
   }
 
   .button-container button:hover {
-  background-color: #ddd; /* Change background color on hover (lighter shade) */
-  /* Add a slight shadow on hover */
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
 }
 
-  .button-container button:nth-child(1) {
-  background-color: rgb(189, 189, 189);
-  top:50%;
-  }
+p#text {
+  position: absolute;
+  font-weight: normal;
+  font-size: 2vw; 
+  width: 70%;  
+  top: 25%;
+  right:15%; 
+  white-space: pre-wrap;
+}
 
-  .button-container button:nth-child(2) {
-  background-color: coral;
-  top:50%;
-  }
 
   p:nth-child(2) {
+    font-size:2.6vw;
     margin: 0%;
     padding: 0%;
     color: blue;
-    font-size: x-large;
+  }
+  p:nth-child(3) {
+    font-size:2.6vw;
+    margin: 0%;
+    padding: 0%;
+    color: blue;
   }
 
   .step2{
@@ -167,5 +199,11 @@
 
   .step3{
     display:none;
+  }
+
+  .blue {
+    background: linear-gradient(to bottom, blue 75%, white 25%);
+    width: 100vw;
+    color: white;
   }
 </style>
