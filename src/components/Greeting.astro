@@ -7,7 +7,6 @@
   const button3 = document.getElementById("bangkok");
   const button4 = document.getElementById("uthai");
   const button5 = document.getElementById("thai");
-  const button6 = document.getElementById("inequality");
   const text = document.getElementById("text");
 
   
@@ -27,6 +26,7 @@
     button3.classList.add("selected");
     $(".step3").css("display", "unset");
     $(".step2").css("display", "none");
+    $(".nextstep").css("display", "unset");
     text.textContent =
       "สวัสดีคนกรุงเทพ เราให้คุณกู้ได้ 128% ของเงินฝากละกัน ในขณะที่คนอุทัยธานีมีให้กู้ประมาณ 32% ของเงินฝาก และคนไทยเฉลี่ยทั้งประเทศกู้ได้ประมาณ 107% ของเงินฝาก";
   });
@@ -35,6 +35,7 @@
     button4.classList.add("selected");
     $(".step3").css("display", "unset");
     $(".step2").css("display", "none");
+    $(".nextstep").css("display", "unset");
     text.textContent =
       "สวัสดีคนอุทัยธานี เราให้คุณกู้ได้แค่ 32% ของเงินฝากนะ เสียดาย ถ้าคุณเป็นคนกรุงเทพ คุณจะกู้ได้ถึง 128% ของเงินฝาก แล้วคนไทยเฉลี่ยทั้งประเทศยังกู้ได้ประมาณ 107% ของเงินฝาก";
   });
@@ -43,6 +44,7 @@
     button5.classList.add("selected");
     $(".step3").css("display", "unset");
     $(".step2").css("display", "none");
+    $(".nextstep").css("display", "unset");
     text.textContent =
       "สวัสดีคนไทย เราให้คุณกู้ได้ 107% ของเงินฝากนะ เสียดาย ถ้าคุณเป็นคนกรุงเทพ คุณจะกู้ได้ถึง 128% ของเงินฝาก แต่ถ้าคุณเป็นคนอุทัยธานี คุณจะกู้ได้ประมาณ 32% ของเงินฝาก";
   });
@@ -74,9 +76,7 @@
 <div class = "step3">
   <section>
     <div><p id="text"></p></div>
-    <div class="button-container">
-      <button id="inequality">เห็นความเหลื่อมล้ำไหม??</button>
-    </div>
+      <p id="inequality">เห็นความเหลื่อมล้ำไหม??</p>
   </section>
 </div>
 
@@ -116,20 +116,20 @@
   }
 
   .button-container button {
-  margin: 5vh;
-  width: 62vh;
-  height: 25vh;
+  margin: 10vh;
+  width: 41vh;
+  height: 17vh;
   margin-right: 40px;
   padding: 10px 20px;
   border: none;
-  border-radius: 5px;
+  border-radius: 20px;
   cursor: pointer;
 }
 
 /* For screens wider than 768px, use a larger font size */
 @media (min-width: 768px) {
   .button-container button {
-    font-size: 2.2rem;
+    font-size: 1.4rem;
   }
 }
 
@@ -145,11 +145,13 @@
 }
 
   .button-container button:nth-child(1) {
-  background-color: aqua;
+  background-color: rgb(189, 189, 189);
+  top:50%;
   }
 
   .button-container button:nth-child(2) {
   background-color: coral;
+  top:50%;
   }
 
   p:nth-child(2) {
